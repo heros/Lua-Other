@@ -51,19 +51,19 @@ function Odo_OnCombat(pUnit, Event)
 end
 
 function Odo_Rage1(pUnit, Event)
-	if pUnit:GetHealthPct() == 45 then
+	if (pUnit:GetHealthPct() == 45) then
 		pUnit:CastSpell(7481) 
 	end
 end
 
 function Odo_Rage2(pUnit, Event)
-	if pUnit:GetHealthPct() == 30 then
+	if (pUnit:GetHealthPct() == 30) then
 		pUnit:CastSpell(7483) 
 	end
 end
 	
 function Odo_Rage3(pUnit, Event)
-	if pUnit:GetHealthPct() == 15 then
+	if (pUnit:GetHealthPct() == 15) then
 		pUnit:CastSpell(7484) 
 	end
 end
@@ -83,19 +83,15 @@ end
 
 function Nandos_Worg(pUnit, Event)
 	RandomTimer5 = math.random(1,3)
-	
 	if RandomTimer5 == 1 then
 		pUnit:CastSpell(7487)
 	end
-	
 	if RandomTimer5 == 2 then
 		pUnit:CastSpell(7488)
 	end
-	
 	if RandomTimer5 == 3 then
 		pUnit:CastSpell(7489)
 	end
-	
 end	
 
 function Arugal_OnCombat(pUnit, Event)
@@ -105,27 +101,21 @@ end
 
 function Arugal_Random(pUnit, Event)
 	RandomTimer7 = math.random(1,6)
-	
 	if RandomTimer7 == 1 then
 		pUnit:FullCastSpellOnTarget(7588, pUnit:GetRandomPlayer(0)) 
 	end
-
 	if RandomTimer7 == 2 then
 		pUnit:FullCastSpellOnTarget(7588, pUnit:GetRandomPlayer(0))
 	end
-
 	if RandomTimer7 == 3 then
 		pUnit:FullCastSpellOnTarget(7588, pUnit:GetRandomPlayer(0)) 
 	end
-
 	if RandomTimer7 == 4 then
 		pUnit:FullCastSpellOnTarget(7124, pUnit:GetRandomPlayer(0)) 
 	end
-	
 	if RandomTimer7 == 5 then
 		pUnit:CastSpell(7803) 
 	end
-	
 	if RandomTimer7 == 6 then
 		pUnit:FullCastSpellOnTarget(7621, pUnit:GetRandomPlayer(0)) 
 	end
