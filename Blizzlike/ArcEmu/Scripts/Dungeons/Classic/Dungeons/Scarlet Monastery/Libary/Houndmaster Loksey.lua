@@ -1,5 +1,11 @@
--- Houndmaster Loksey
-	math.randomseed(os.time())
+-------------------------------------------------------------------
+-- This script is created by zdroid9770; please do not edit this --
+-- script and claim it as your own, as of All rights are claimed --
+-- by me.                                                        --
+--                     Copyright© zdroid9770					 --
+-------------------------------------------------------------------
+
+math.randomseed(os.time())
 
 function Hound_Cleave(pUnit, Event)
 	pUnit:FullCastSpellOnTarget(38260, pUnit:GetMainTank()) 
