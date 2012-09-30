@@ -29,9 +29,6 @@ local T_SHADOWSHIELD = 12000
 local T_CURSE = 2000
 local T_TELEPORT = 16000
 
-
-
--- [[ Functions ]] --
 function Darkmaster_OnCombat(Unit, Event)
 	Unit:RegisterEvent("Darkmaster_Arcane", T_ARCANEMISSILES, 1)
 	Unit:RegisterEvent("Darkmaster_Shadowshield", T_SHADOWSHIELD, 0)
@@ -77,40 +74,40 @@ function Darkmaster_Teleport(Unit, Event)
 		target=Unit:GetRandomPlayer()
 		Unit:ChangeTarget(target)
 		target:SendBroadcastMessage("You are now the target of"..Unit:GetName().."!") -- not blizzlike but nice ;)
-		rand=math.random(1,6)
-		if (rand==1) then
-			Unit:SpawnCreature(16119,254.2325,0.3417,84.8407,0,10000)
-			Unit:SpawnCreature(16119,257.7133,4.0226,84.8407,0,10000)
-			Unit:SpawnCreature(16119,258.6702,-2.60656,84.8407,0,10000)
-		end
-		if (rand==2) then
-			Unit:SpawnCreature(16119,184.0519,-73.5649,84.8407,0,10000)
-			Unit:SpawnCreature(16119,179.5951,-73.7045,84.8407,0,10000)
-			Unit:SpawnCreature(16119,180.6452,-78.2143,84.8407,0,10000)
-			Unit:SpawnCreature(16119,283.2274,-78.1518,84.8407,0,10000)
-		end
-		if (rand==3) then
-			Unit:SpawnCreature(16119,100.9404,-1.8016,85.2289,0,10000)
-			Unit:SpawnCreature(16119,101.3729,0.4882,85.2289,0,10000)
-			Unit:SpawnCreature(16119,101.4596,-4.4740,85.2289,0,10000)
-		end
-		if (rand==4) then
-			Unit:SpawnCreature(16119,240.34481,0.7368,72.6722,0,10000)
-			Unit:SpawnCreature(16119,240.3633,-2.9520,72.6722,0,10000)
-			Unit:SpawnCreature(16119,240.6702,3.34949,72.6722,0,10000)
-		end
-		if (rand==5) then
-			Unit:SpawnCreature(16119,184.0519,-73.5649,70.7734,0,10000)
-			Unit:SpawnCreature(16119,179.5951,-73.7045,70.7734,0,10000)
-			Unit:SpawnCreature(16119,180.6452,-78.2143,70.7734,0,10000)
-			Unit:SpawnCreature(16119,283.2274,-78.1518,70.7734,0,10000)
-		end
-		if (rand==6) then
-			Unit:SpawnCreature(16119,115.3945,-1.5555,75.3663,0,10000)
-			Unit:SpawnCreature(16119,257.7133,1.8066,75.3663,0,10000)
-			Unit:SpawnCreature(16119,258.6702,-5.1001,75.3663,0,10000)
-		end
+		rand = math.random(1,6)
+	if (rand == 1) then
+		Unit:SpawnCreature(16119,254.2325,0.3417,84.8407,0,10000)
+		Unit:SpawnCreature(16119,257.7133,4.0226,84.8407,0,10000)
+		Unit:SpawnCreature(16119,258.6702,-2.60656,84.8407,0,10000)
 	end
+	if (rand == 2) then
+		Unit:SpawnCreature(16119,184.0519,-73.5649,84.8407,0,10000)
+		Unit:SpawnCreature(16119,179.5951,-73.7045,84.8407,0,10000)
+		Unit:SpawnCreature(16119,180.6452,-78.2143,84.8407,0,10000)
+		Unit:SpawnCreature(16119,283.2274,-78.1518,84.8407,0,10000)
+	end
+	if (rand == 3) then
+		Unit:SpawnCreature(16119,100.9404,-1.8016,85.2289,0,10000)
+		Unit:SpawnCreature(16119,101.3729,0.4882,85.2289,0,10000)
+		Unit:SpawnCreature(16119,101.4596,-4.4740,85.2289,0,10000)
+	end
+	if (rand == 4) then
+		Unit:SpawnCreature(16119,240.34481,0.7368,72.6722,0,10000)
+		Unit:SpawnCreature(16119,240.3633,-2.9520,72.6722,0,10000)
+		Unit:SpawnCreature(16119,240.6702,3.34949,72.6722,0,10000)
+	end
+	if (rand == 5) then
+		Unit:SpawnCreature(16119,184.0519,-73.5649,70.7734,0,10000)
+		Unit:SpawnCreature(16119,179.5951,-73.7045,70.7734,0,10000)
+		Unit:SpawnCreature(16119,180.6452,-78.2143,70.7734,0,10000)
+		Unit:SpawnCreature(16119,283.2274,-78.1518,70.7734,0,10000)
+	end
+	if (rand == 6) then
+		Unit:SpawnCreature(16119,115.3945,-1.5555,75.3663,0,10000)
+		Unit:SpawnCreature(16119,257.7133,1.8066,75.3663,0,10000)
+		Unit:SpawnCreature(16119,258.6702,-5.1001,75.3663,0,10000)
+	end
+end
 
 function Darkmaster_OnLeaveCombat(Unit, Event)
 	Unit:RemoveEvents()
@@ -123,7 +120,6 @@ function Darkmaster_OnDied(Unit, Event)
 	Unit:RemoveEvents()
 end
 
--- [[ Registering ]] --
 RegisterUnitEvent(1853, 1, "Darkmaster_OnCombat")
 RegisterUnitEvent(1853, 2, "Darkmaster_OnLeaveCombat")
 RegisterUnitEvent(1853, 3, "Darkmaster_OnKilledTarget")
