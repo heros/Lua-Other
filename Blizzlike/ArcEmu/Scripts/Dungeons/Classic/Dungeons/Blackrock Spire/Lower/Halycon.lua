@@ -24,9 +24,6 @@ function Thrash(pUnit, Event)
 	pUnit:CastSpell(3391)
 end
 
-function (pUnit, Event)
-end
-
 function Halycon_OnLeaveCombat(pUnit, Event)
 	pUnit:RemoveEvents()
 end
