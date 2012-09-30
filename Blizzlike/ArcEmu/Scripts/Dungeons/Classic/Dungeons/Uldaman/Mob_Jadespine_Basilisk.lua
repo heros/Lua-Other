@@ -17,66 +17,27 @@
 ========================================]]--
 -- % Complete: 100
 
-
-
 -- [[ Spells ]] --
-
-
 local CSLUMBER = 3636
 
-
-
-
-
-
--- [[ Functions ]] --
-
-
 function Basilisk_OnCombat(Unit, Event)
-	
-cslumber=2000+math.random(1,26000) -- not exactly blizzlike, normal 1st 2000 then 28k
-	
-Unit:RegisterEvent("Basilisk_Cslumber", 2000, 0)
-
+local cslumber = 2000+math.random(1,26000) -- not exactly blizzlike, normal 1st 2000 then 28k
+Unit:RegisterEvent("Basilisk_Cslumber", cslumber, 0)
 end
-
-
 
 function Basilisk_Cslumber(Unit, Event)
-	
-Target=Unit:GetRandomPlayer()
-	
-Unit:FullCastSpellOnTarget(CSLUMBER, Target)
-
+	local Target=Unit:GetRandomPlayer()
+	Unit:FullCastSpellOnTarget(CSLUMBER, Target)
 end
-
-
 
 function Basilisk_OnLeaveCombat(Unit, Event)
-	
-Unit:RemoveEvents()
-
-end
-
-
-
-function Basilisk_OnKilledTarget(Unit, Event)
-
+	Unit:RemoveEvents()
 end
 
 function Basilisk_OnDied(Unit, Event)
 	Unit:RemoveEvents()
-
 end 
 
-
--- [[ Registering ]] --
-
-
 RegisterUnitEvent(4863, 1, "Basilisk_OnCombat")
-
 RegisterUnitEvent(4863, 2, "Basilisk_OnLeaveCombat")
-
-RegisterUnitEvent(4863, 3, "Basilisk_OnKilledTarget")
-
 RegisterUnitEvent(4863, 4, "Basilisk_OnDied")
