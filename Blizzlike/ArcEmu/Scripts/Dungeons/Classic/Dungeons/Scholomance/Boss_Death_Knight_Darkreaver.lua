@@ -15,13 +15,11 @@
    Original Code by DARKI
    Version 1
 ========================================]]--
--- % Completed: 100
--- Comments: No Comments
+-- % Completed: 20
+-- Comments: Missing Whole Script
 
 -- [[Spells ]] --
 local SUMMON = 23261
-
--- [[ Registering ]] --
 
 function Deathknight_OnCombat(Unit, Event)
 end
@@ -37,7 +35,6 @@ end
 function Deathknight_OnDied(Unit, Event)
 	Unit:RemoveEvents()
 end 
-
 
 RegisterUnitEvent(14516, 1, "Deathknight_OnCombat")
 RegisterUnitEvent(14516, 2, "Deathknight_OnLeaveCombat")
