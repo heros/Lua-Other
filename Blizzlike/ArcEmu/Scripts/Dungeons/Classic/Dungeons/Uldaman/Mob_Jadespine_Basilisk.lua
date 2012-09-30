@@ -21,8 +21,8 @@
 local CSLUMBER = 3636
 
 function Basilisk_OnCombat(Unit, Event)
-local cslumber = 2000+math.random(1,26000) -- not exactly blizzlike, normal 1st 2000 then 28k
-Unit:RegisterEvent("Basilisk_Cslumber", cslumber, 0)
+	local cslumber = 2000+math.random(1,26000) -- not exactly blizzlike, normal 1st 2000 then 28k
+	Unit:RegisterEvent("Basilisk_Cslumber", cslumber, 0)
 end
 
 function Basilisk_Cslumber(Unit, Event)
