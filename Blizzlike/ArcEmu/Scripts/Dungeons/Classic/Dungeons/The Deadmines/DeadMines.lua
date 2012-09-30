@@ -344,7 +344,7 @@ function VanCleef_Phase4(pUnit)
 end
 
 function VanCleef_OnKilledTarget(pUnit)
-    pUnit:SendChatMessage(12, 0, "Und bleib sitzen!")
+    pUnit:SendChatMessage(12, 0, "And stay seated!")
     pUnit:PlaySoundToSet(5781)
 end
 
