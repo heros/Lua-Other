@@ -2,11 +2,11 @@
 -- This script is created by zdroid9770; please do not edit this --
 -- script and claim it as your own, as of All rights are claimed --
 -- by me.                                                        --
---                     Copyright© zdroid9770					 --
+--                     Copyright© zdroid9770			 --
 -------------------------------------------------------------------
 
 function Deep_Borer_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(44030, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(44030, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Deep_Borerphase1", 1000, 0)
 	pUnit:RegisterEvent("Deep_BorerTackle", 1000, 0)
 end
@@ -29,7 +29,7 @@ end
 
 
 function Deep_BorerTackle(pUnit, event)
-	pUnit:FullCastSpellOnTarget(44030, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(44030, pUnit:GetRandomPlayer(0))
 end
 
 function Deep_Borer_OnDeath(pUnit, event)
@@ -45,7 +45,7 @@ RegisterpUnitEvent(11789, 2, "Deep_Borer_OnLeaveCombat")
 RegisterpUnitEvent(11789, 4, "Deep_Borer_OnDeath")
 
 function Deeprot_Stomper_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(27993, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(27993, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Deeprot_Stomperphase1", 1000, 0)
 end
 
@@ -106,11 +106,11 @@ function Deeprot_StomperStomp(pUnit, event)
 end
 
 function Deeprot_StomperSlam(pUnit, event)
-	pUnit:FullCastSpellOnTarget(35953, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(35953, pUnit:GetRandomPlayer(0))
 end
 
 function Deeprot_StomperStun(pUnit, event)
-	pUnit:FullCastSpellOnTarget(34620, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(34620, pUnit:GetRandomPlayer(0))
 end
 
 function Deeprot_Stomper_OnDeath(pUnit, event)
@@ -126,7 +126,7 @@ RegisterpUnitEvent(13141, 2, "Deeprot_Stomper_OnLeaveCombat")
 RegisterpUnitEvent(13141, 4, "Deeprot_Stomper_OnDeath")
 
 function Deeprot_Tangler_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(40363, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(40363, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Deeprot_Tanglerphase1", 1000, 0)
 end
 
@@ -184,15 +184,15 @@ end
 
 
 function Deeprot_TanglerRoot(pUnit, event)
-	pUnit:FullCastSpellOnTarget(20699, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(20699, pUnit:GetRandomPlayer(0))
 end
 
 function Deeprot_TanglerSlam(pUnit, event)
-	pUnit:FullCastSpellOnTarget(35953, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(35953, pUnit:GetRandomPlayer(0))
 end
 
 function Deeprot_TanglerStun(pUnit, event)
-	pUnit:FullCastSpellOnTarget(34620, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(34620, pUnit:GetRandomPlayer(0))
 end
 
 function Deeprot_Tangler_OnDeath(pUnit, event)
@@ -209,7 +209,7 @@ RegisterpUnitEvent(13142, 4, "Deeprot_Tangler_OnDeath")
 
 
 function Diemetradon_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(12734, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(12734, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Diemetradonphase1", 1000, 0)
 end
 
@@ -293,15 +293,15 @@ function Hydra_OnCombat(pUnit, event)
 end
 
 function HydraArcane(pUnit, event)
-	pUnit:FullCastSpellOnTarget(38823, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(38823, pUnit:GetRandomPlayer(0))
 end
 
 function HydraHoly(pUnit, event)
-	pUnit:FullCastSpellOnTarget(36743, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(36743, pUnit:GetRandomPlayer(0))
 end
 
 function HydraPoison(pUnit, event)
-	pUnit:FullCastSpellOnTarget(25424, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(25424, pUnit:GetRandomPlayer(0))
 end
 
 function Hydra_OnDeath(pUnit, event)
@@ -317,7 +317,7 @@ RegisterpUnitEvent(12207, 2, "Hydra_OnLeaveCombat")
 RegisterpUnitEvent(12207, 4, "Hydra_OnDeath")
 --[[
 function Pre_Behemoth_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(26281, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(26281, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Pre_Behemothphase1", 1000, 0)
 	pUnit:SendChatMessage(12, 0, "My stone body will crush you!")
 end
@@ -393,7 +393,7 @@ function Pre_BehemothStomp(pUnit, event)
 end
 
 function Pre_BehemothCrush(pUnit, event)
-	pUnit:FullCastSpellOnTarget(33661, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(33661, pUnit:GetRandomPlayer(0))
 end
 
 function Pre_Behemoth_OnDeath(pUnit, event)
@@ -411,7 +411,7 @@ RegisterpUnitEvent(12203, 4, "Pre_Behemoth_OnDeath")
 
 
 function Barbed_Lasher_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(20699, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(20699, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Barbed_Lasherphase1", 1000, 0)
 end
 
@@ -467,15 +467,15 @@ end
 
 
 function Barbed_LasherFaerieFire(pUnit, event)
-	pUnit:FullCastSpellOnTarget(21670, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(21670, pUnit:GetRandomPlayer(0))
 end
 
 function Barbed_LasherCyclone(pUnit, event)
-	pUnit:FullCastSpellOnTarget(33786, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(33786, pUnit:GetRandomPlayer(0))
 end
 
 function Barbed_LasherSwarm(pUnit, event)
-	pUnit:FullCastSpellOnTarget(24975, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(24975, pUnit:GetRandomPlayer(0))
 end
 
 function Barbed_Lasher_OnDeath(pUnit, event)
@@ -491,7 +491,7 @@ RegisterUnitEvent(12219, 2, "Barbed_Lasher_OnLeaveCombat")
 RegisterUnitEvent(12219, 4, "Barbed_Lasher_OnDeath")
 
 function Constrictor_Vine_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(20699, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(20699, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Constrictor_Vinephase1", 1000, 0)
 end
 
@@ -546,15 +546,15 @@ function Constrictor_Vinephase6(pUnit, event)
 end
 
 function Constrictor_VineFaerieFire(pUnit, event)
-	pUnit:FullCastSpellOnTarget(21670, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(21670, pUnit:GetRandomPlayer(0))
 end
 
 function Constrictor_VineCyclone(pUnit, event)
-	pUnit:FullCastSpellOnTarget(33786, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(33786, pUnit:GetRandomPlayer(0))
 end
 
 function Constrictor_VineSwarm(pUnit, event)
-	pUnit:FullCastSpellOnTarget(24975, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(24975, pUnit:GetRandomPlayer(0))
 end
 
 function Constrictor_Vine_OnDeath(pUnit, event)
@@ -621,11 +621,11 @@ end
 
 
 function Creeping_SludgeSludgeNova(pUnit, event)
-	pUnit:FullCastSpellOnTarget(40103, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(40103, pUnit:GetRandomPlayer(0))
 end
 
 function Creeping_SludgeAcidBite(pUnit, event)
-	pUnit:FullCastSpellOnTarget(36796, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(36796, pUnit:GetRandomPlayer(0))
 end
 
 function Creeping_Sludge_OnDeath(pUnit, event)
@@ -642,7 +642,7 @@ RegisterUnitEvent(12222, 4, "Creeping_Sludge_OnDeath")
 
 
 function Cavern_Shambler_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(20699, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(20699, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Cavern_Shamblerphase1", 1000, 0)
 end
 
@@ -671,11 +671,11 @@ function Cavern_Shamblerphase3(pUnit, event)
 end
 
 function Cavern_ShamblerStomp(pUnit, event)
-	pUnit:FullCastSpellOnTarget(24375, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(24375, pUnit:GetRandomPlayer(0))
 end
 
 function Cavern_ShamblerArcSmash(pUnit, event)
-	pUnit:FullCastSpellOnTarget(28168, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(28168, pUnit:GetRandomPlayer(0))
 end
 
 function Cavern_Shambler_OnDeath(pUnit, event)
@@ -694,7 +694,7 @@ RegisterUnitEvent(12224, 2, "Cavern_Shambler_OnLeaveCombat")
 RegisterUnitEvent(12224, 4, "Cavern_Shambler_OnDeath")
 
 function Celebrian_Dryad_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(20699, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(20699, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Celebrian_Dryadphase1", 1000, 0)
 	pUnit:RegisterEvent("Celebrian_DryadWrath", 8000, 0)
 end
@@ -741,15 +741,15 @@ function Celebrian_Dryadphase5(pUnit, event)
 end
 
 function Celebrian_DryadWrath(pUnit, event)
-	pUnit:FullCastSpellOnTarget(26985, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(26985, pUnit:GetRandomPlayer(0))
 end
 
 function Celebrian_DryadWrathSpeed(pUnit, event)
-	pUnit:FullCastSpellOnTarget(26985, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(26985, pUnit:GetRandomPlayer(0))
 end
 
 function Celebrian_DryadSwarm(pUnit, event)
-	pUnit:FullCastSpellOnTarget(24975, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(24975, pUnit:GetRandomPlayer(0))
 end
 
 function Celebrian_Dryad_OnDeath(pUnit, event)
@@ -769,7 +769,7 @@ RegisterUnitEvent(11794, 4, "Celebrian_Dryad_OnDeath")
 
 
 function Meshlok_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(20699, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(20699, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Meshlokphase1", 1000, 0)
 	pUnit:RegisterEvent("MeshlokSuperEnrage", 360000, 0)
 	pUnit:SendChatMessage(12, 0, "May the earth aid me in this battle!")
@@ -814,7 +814,7 @@ function Meshlokphase4(pUnit, event)
 end
 
 function MeshlokStomp(pUnit, event)
-	pUnit:FullCastSpellOnTarget(24375, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(24375, pUnit:GetRandomPlayer(0))
 end
 
 function MeshlokSuperEnrage(pUnit, event)
@@ -849,7 +849,7 @@ RegisterUnitEvent(12237, 4, "Meshlok_OnDeath")
 
 
 function Noxious_Slime_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(15475, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(15475, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Noxious_Slimephase1", 1000, 0)
 	pUnit:RegisterEvent("Noxious_SlimeDebiPoison", 10000, 0)
 end
@@ -866,7 +866,7 @@ end
 function Noxious_Slimephase3(pUnit, event)
 	if pUnit:GetHealthPct() < 58 then
 		pUnit:RemoveEvents()
-		pUnit:FullCastSpellOnTarget(5208, 	pUnit:GetRandomPlayer(0))
+		pUnit:FullCastSpellOnTarget(5208, pUnit:GetRandomPlayer(0))
 		pUnit:RegisterEvent("Noxious_Slimephase4", 1000, 0)
 	end
 end
@@ -896,7 +896,7 @@ end
 
 
 function Noxious_SlimeDebiPoison(pUnit, event)
-	pUnit:FullCastSpellOnTarget(43133, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(43133, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Noxious_SlimeDebiPoison", 10000, 0)
 end
 
@@ -913,7 +913,7 @@ RegisterUnitEvent(12221, 2, "Noxious_Slime_OnLeaveCombat")
 RegisterUnitEvent(12221, 4, "Noxious_Slime_OnDeath")
 
 function Noxxion_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(16050, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(16050, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Noxxionphase1", 1000, 0)
 	pUnit:RegisterEvent("NoxxionSpout", 6000, 0)
 	pUnit:SendChatMessage(12, 0, "May the power of the water stop these pestering rats!")
@@ -983,7 +983,7 @@ function Noxxionphase6(pUnit, event)
 end
 
 function NoxxionSpout(pUnit, event)
-	pUnit:FullCastSpellOnTarget(39207, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(39207, pUnit:GetRandomPlayer(0))
 end
 
 function NoxxionSludgeNova(pUnit, event)
@@ -991,7 +991,7 @@ function NoxxionSludgeNova(pUnit, event)
 end
 
 function NoxxionSwarm(pUnit, event)
-	pUnit:FullCastSpellOnTarget(24975, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(24975, pUnit:GetRandomPlayer(0))
 end
 
 function Noxxion_OnDeath(pUnit, event)
@@ -1008,7 +1008,7 @@ RegisterUnitEvent(13282, 2, "Noxxion_OnLeaveCombat")
 RegisterUnitEvent(13282, 4, "Noxxion_OnDeath")
 
 function Poison_Sprite_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(26601, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(26601, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Poison_Spritephase1", 1000, 0)
 end
 
@@ -1024,11 +1024,11 @@ function Poison_Spritephase1(pUnit, event)
 end
 
 function Poison_SpritePoisonBolt(pUnit, event)
-	pUnit:FullCastSpellOnTarget(37862, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(37862, pUnit:GetRandomPlayer(0))
 end
 
 function Poison_SpriteCorruption(pUnit, event)
-	pUnit:FullCastSpellOnTarget(41988, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(41988, pUnit:GetRandomPlayer(0))
 end
 
 function Poison_Sprite_OnDeath(pUnit, event)
@@ -1056,7 +1056,7 @@ RegisterUnitEvent(12217, 4, "Corruptor_OnDeath")
 
 
 function Putridus_Trickster_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(30741, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(30741, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Putridus_Tricksterphase1", 1000, 0)
 end
 
@@ -1103,11 +1103,11 @@ end
 
 
 function Putridus_TricksterCut(pUnit, event)
-	pUnit:FullCastSpellOnTarget(32009, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(32009, pUnit:GetRandomPlayer(0))
 end
 
 function Putridus_TricksterSlice(pUnit, event)
-	pUnit:FullCastSpellOnTarget(4285, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(4285, pUnit:GetRandomPlayer(0))
 end
 
 function Putridus_Trickster_OnDeath(pUnit, event)
@@ -1135,7 +1135,7 @@ end
 function Spewed_Larvaphase1(pUnit, event)
 	if pUnit:GetHealthPct() < 89 then
 		pUnit:RemoveEvents()
-		pUnit:FullCastSpellOnTarget(20420, 	pUnit:GetRandomPlayer(0))
+		pUnit:FullCastSpellOnTarget(20420, pUnit:GetRandomPlayer(0))
 		pUnit:RegisterEvent("Spewed_Larvaphase2", 1000, 0)
 	end
 end
@@ -1157,11 +1157,11 @@ function Spewed_Larvaphase5(pUnit, event)
 end
 
 function Spewed_LarvaChainFireball(pUnit, event)
-	pUnit:FullCastSpellOnTarget(35853, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(35853, pUnit:GetRandomPlayer(0))
 end
 
 function Spewed_LarvaFireball(pUnit, event)
-	pUnit:FullCastSpellOnTarget(21162, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(21162, pUnit:GetRandomPlayer(0))
 end
 
 function Spewed_LarvaFireShield(pUnit, event)
@@ -1190,7 +1190,7 @@ end
 function Vine_Larvaphase1(pUnit, event)
 	if pUnit:GetHealthPct() < 89 then
 		pUnit:RemoveEvents()
-		pUnit:FullCastSpellOnTarget(20420, 	pUnit:GetRandomPlayer(0))
+		pUnit:FullCastSpellOnTarget(20420, pUnit:GetRandomPlayer(0))
 		pUnit:RegisterEvent("Vine_Larvaphase2", 1000, 0)
 	end
 end
@@ -1214,11 +1214,11 @@ end
 
 
 function Vine_LarvaChainFireball(pUnit, event)
-	pUnit:FullCastSpellOnTarget(35853, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(35853, pUnit:GetRandomPlayer(0))
 end
 
 function Vine_LarvaFireball(pUnit, event)
-	pUnit:FullCastSpellOnTarget(18199, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(18199, pUnit:GetRandomPlayer(0))
 end
 
 function Vine_LarvaFireShield(pUnit, event)
@@ -1238,7 +1238,7 @@ RegisterUnitEvent(12218, 2, "Vine_Larva_OnLeaveCombat")
 RegisterUnitEvent(12218, 4, "Vine_Larva_OnDeath")
 
 function Pre_Behemoth_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(26281, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(26281, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Pre_Behemothphase1", 1000, 0)
 end
 
@@ -1301,7 +1301,7 @@ function Pre_BehemothStomp(pUnit, event)
 end
 
 function Pre_BehemothCrush(pUnit, event)
-	pUnit:FullCastSpellOnTarget(33661, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(33661, pUnit:GetRandomPlayer(0))
 end
 
 function Pre_Behemoth_OnDeath(pUnit, event)
@@ -1318,7 +1318,7 @@ RegisterUnitEvent(12206, 4, "Pre_Behemoth_OnDeath")
 
 
 function Putridus_Shadowstalker_OnCombat(pUnit, event)
-	pUnit:FullCastSpellOnTarget(30741, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(30741, pUnit:GetRandomPlayer(0))
 	pUnit:RegisterEvent("Putridus_Shadowstalkerphase1", 1000, 0)
 end
 
@@ -1365,11 +1365,11 @@ end
 
 
 function Putridus_ShadowstalkerCut(pUnit, event)
-	pUnit:FullCastSpellOnTarget(32009, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(32009, pUnit:GetRandomPlayer(0))
 end
 
 function Putridus_ShadowstalkerSlice(pUnit, event)
-	pUnit:FullCastSpellOnTarget(4285, 	pUnit:GetRandomPlayer(0))
+	pUnit:FullCastSpellOnTarget(4285, pUnit:GetRandomPlayer(0))
 end
 
 function Putridus_Shadowstalker_OnDeath(pUnit, event)
