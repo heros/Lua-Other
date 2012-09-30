@@ -34,9 +34,6 @@ function MSW_Summon(pUnit, Event)
 	pUnit:CastSpell(16103)
 end
 
-function MSW_OnKilledTarget(pUnit, Event, player)
-end
-
 function MSW_OnLeaveCombat(pUnit, Event)
 	pUnit:RemoveEvents()
 end
@@ -47,5 +44,4 @@ end
 
 RegisterUnitEvent(10596, 1, "MSW_OnCombat")
 RegisterUnitEvent(10596, 2, "MSW_OnLeaveCombat")
-RegisterUnitEvent(10596, 3, "MSW_OnKilledTarget")
 RegisterUnitEvent(10596, 4, "MSW_OnDeath")
