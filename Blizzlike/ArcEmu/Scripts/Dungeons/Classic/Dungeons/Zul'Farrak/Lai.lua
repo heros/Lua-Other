@@ -15,22 +15,21 @@
    Version 1
 ========================================]]--
 
--- global variables
-check = 0
+local check = 0
 
 function Lai_ShadowBolt(pUnit, event)        -- got no name yet
-plr = pUnit:GetRandomPlayer(0)
+local plr = pUnit:GetRandomPlayer(0)
     if plr then
-    pUnit:FullCastSpellOnTarget(29317, plr)
+ 	pUnit:FullCastSpellOnTarget(29317, plr)
     else
     end
 end
 
 function Lai_Nethervapor(pUnit, event)
-plr = pUnit:GetMainTank()
+local plr = pUnit:GetMainTank()
     if plr then
-    pUnit:SendChatMessage(12, 0, "You may not pass!")
-    pUnit:FullCastSpellOnTarget(35859, plr)
+		pUnit:SendChatMessage(12, 0, "You may not pass!")
+		pUnit:FullCastSpellOnTarget(35859, plr)
     else
     end
 end
@@ -46,25 +45,25 @@ function Lai_Nova(pUnit, event)
 end
 
 function Lai_EventSummon(pUnit, Event)         -- spawns friendly npc 15m off a random player
-spawn = pUnit:GetRandomPlayer(0)
-    x = spawn:GetX()
-    y = spawn:GetY()
-    z = spawn:GetZ()
-    pUnit:SpawnCreature(22990,x+15,y,z,90,1836,0)
+local spawn = pUnit:GetRandomPlayer(0)
+    local x = spawn:GetX()
+    local y = spawn:GetY()
+    local z = spawn:GetZ()
+    pUnit:SpawnCreature(22990, x+15, y, z, 90, 1836, 0)
 end
 
 function Lai_EventPhase2(pUnit, event)
     pUnit:SendChatMessage(12, 0, "Im really angry now...")
-    x = pUnit:GetX()
-    y = pUnit:GetY()
-    z = pUnit:GetZ()
-    pUnit:SpawnCreature(21961,x+15,y,z,90,14,0)        -- spawns enemy helper npc
+    local x = pUnit:GetX()
+    local y = pUnit:GetY()
+    local z = pUnit:GetZ()
+    pUnit:SpawnCreature(21961, x+15, y, z, 90, 14, 0)        -- spawns enemy helper npc
 end
 
 function Lai_EventPhase2Check(pUnit, event)
-    health = pUnit:GetHealthPct()
-    if health < 50 then
-        if check == 0 then
+local health = pUnit:GetHealthPct()
+    if (health < 50) then
+        if (check == 0) then
             check=1
             pUnit:RegisterEvent("Lai_EventPhase2",1500, 1)
         else
@@ -73,28 +72,25 @@ function Lai_EventPhase2Check(pUnit, event)
     end
 end
 
-
 function Lai_OnEnterCombat(pUnit, event)    -- main mob function on entercomba
     pUnit:RegisterEvent("Lai_ShadowBolt", 18000, 0)        --
     pUnit:RegisterEvent("Lai_Nethervapor", 13000, 0)       --
     pUnit:RegisterEvent("Lai_Fear", 9000, 0)               --  test values
     pUnit:RegisterEvent("Lai_Nova", 23000, 0)              --
     pUnit:RegisterEvent("Lai_EventSummon", 1500, 1)        --
-    if check == 0 then
-    pUnit:RegisterEvent("Lai_EventPhase2Check", 1500,0)
+    if (check == 0) then
+		pUnit:RegisterEvent("Lai_EventPhase2Check", 1500,0)
     else
     end
 end
 
-RegisterUnitEvent(230040, 1, "Lai_OnEnterCombat")
-
 function LaiHlp_Infuse(pUnit, event)
-    boss = pUnit:GetRandomFriend()
+local boss = pUnit:GetRandomFriend()
     pUnit:FullCastSpellOnTarget(40594 , boss)
 end
 
 function LaiHlp_Heal(pUnit, event)
-    heal = pUnit:GetRandomFriend()
+local heal = pUnit:GetRandomFriend()
     pUnit:FullCastSpellOnTarget(23954, heal)
 end
 
@@ -109,15 +105,11 @@ function Lai_OnWipe(pUnit, Event)
     pUnit:RemoveEvents()
 end
 
-RegisterUnitEvent(230040, 2, "Lai_OnWipe")
-
 function Lai_Dies(pUnit, Event)
     pUnit:SendChatMessage(5, 0, "You weren't prepared! I thought...")
     pUnit:FullCastSpell(29949) -- test
     pUnit:RemoveEvents()
 end
-
-RegisterUnitEvent(230040, 4, "Lai_Dies")
 
 function Spawns_OnLeaveCombat(pUnit, event)         -- to despawn the event mob
     pUnit:Despawn(1000,0)
@@ -125,3 +117,6 @@ end
 
 RegisterUnitEvent(22990, 2, "Spawns_OnLeaveCombat")
 RegisterUnitEvent(23174, 2, "Spawns_OnLeaveCombat")
+RegisterUnitEvent(230040, 1, "Lai_OnEnterCombat")
+RegisterUnitEvent(230040, 2, "Lai_OnWipe")
+RegisterUnitEvent(230040, 4, "Lai_Dies")
