@@ -1,9 +1,16 @@
+-------------------------------------------------------------------
+-- This script is created by zdroid9770; please do not edit this --
+-- script and claim it as your own, as of All rights are claimed --
+-- by me.                                                        --
+--                     Copyright© zdroid9770					 --
+-------------------------------------------------------------------
+
 function Undeadex_Callofgrave(Unit)
 	Unit:CastSpell(5137)
 end
 
 function Undeadex_OnCombat(Unit, event)
-	Unit:RegisterEvent("Undeadex_Callofgrave",10000 , 0)
+	Unit:RegisterEvent("Undeadex_Callofgrave", 10000, 0)
 end
 
 RegisterUnitEvent(624, 0, "Undeadex_OnCombat")
@@ -13,7 +20,7 @@ function Undeaddyn_dynamite(Unit)
 end
 
 function Undeaddyn_OnCombat(Unit, event)
-	Unit:RegisterEvent("Undeadex_dynamite",6500 , 0)
+	Unit:RegisterEvent("Undeadex_dynamite", 6500, 0)
 end
 
 RegisterUnitEvent(625, 0, "Undeaddyn_OnCombat")
@@ -24,7 +31,7 @@ function Undeadskel_strike(Unit)
 end
 
 function Undeaddyn_OnCombat(Unit, event)
-	Unit:RegisterEvent("Undeadskel_dynamite",3000 , 0)
+	Unit:RegisterEvent("Undeadskel_dynamite", 3000, 0)
 end
 
 RegisterUnitEvent(623, 0, "Undeadskel_OnCombat")
@@ -34,7 +41,7 @@ function woodcarver_strike(Unit)
 end
 
 function woodcarver_OnCombat(Unit, event)
-	Unit:RegisterEvent("Undeadskel_dynamite",8000 , 0)
+	Unit:RegisterEvent("Undeadskel_dynamite", 8000, 0)
 	Unit:CastSpell(6466)
 end
 
@@ -45,7 +52,7 @@ function engineer_spawn(Unit)
 end
 
 function engineer_OnCombat(Unit, event)
-	Unit:RegisterEvent("engineer_spawn",20000 , 0)
+	Unit:RegisterEvent("engineer_spawn", 20000, 0)
 	Unit:CastSpell(6660)
 end
 
@@ -56,7 +63,7 @@ function crafts_ore(Unit)
 end
 
 function crafts_OnCombat(Unit, event)
-	Unit:RegisterEvent("crafts_ore",20000 , 0)
+	Unit:RegisterEvent("crafts_ore", 20000, 0)
 	Unit:CastSpell(5159)
 end
 
@@ -71,8 +78,8 @@ function wizard_fire(Unit)
 end
 
 function wizard_OnCombat(Unit, event)
-	Unit:RegisterEvent("wizard_ice",12000 , 0)
-	Unit:RegisterEvent("wizard_fire",4000 , 0)
+	Unit:RegisterEvent("wizard_ice", 12000, 0)
+	Unit:RegisterEvent("wizard_fire", 4000, 0)
 	Unit:CastSpell(4979)
 end
 
@@ -89,7 +96,7 @@ function task_peirce(Unit)
 end
 
 function task_OnCombat(Unit, event)
-	Unit:RegisterEvent("task_peirce",8000 , 0)
+	Unit:RegisterEvent("task_peirce", 8000, 0)
 	Unit:CastSpell(6660)
 end
 
@@ -100,7 +107,7 @@ function strip_peirce(Unit)
 end
 
 function strip_OnCombat(Unit, event)
-	Unit:RegisterEvent("task_peirce",8000 , 0)
+	Unit:RegisterEvent("task_peirce", 8000, 0)
 end
 
 RegisterUnitEvent(4416, 0, "strip_OnCombat")
@@ -115,8 +122,8 @@ function squal_freeze(Unit)
 end
 
 function squal_OnCombat(Unit, event)
-	Unit:RegisterEvent("squal_blast",8000 , 0)
-	Unit:RegisterEvent("squal_freeze",12000 , 0)
+	Unit:RegisterEvent("squal_blast", 8000, 0)
+	Unit:RegisterEvent("squal_freeze", 12000, 0)
 	Unit:CastSpell(12544)
 end
 
@@ -134,7 +141,7 @@ end
 
 function overseer_OnCombat(Unit, event)
 	Unit:CastSpell(5115)
-	Unit:RegisterEvent("overseer_shout",14000 , 0)
+	Unit:RegisterEvent("overseer_shout", 14000, 0)
 end
 
 RegisterUnitEvent(634, 0, "overseer_OnCombat")
@@ -151,9 +158,8 @@ end
 
 function mage_OnSpawn(Unit, event)
 	Unit:CastSpell(5110)
-	Unit:RegisterEvent("mage_fire",4000 , 0)
+	Unit:RegisterEvent("mage_fire", 4000, 0)
 end
-
 
 RegisterUnitEvent(1726, 0, "mage_OnSpawn")
 
@@ -162,9 +168,8 @@ function hench_slam(Unit)
 end
 
 function hench_OnSpawn(Unit, event)
-	Unit:RegisterEvent("hench_slam",8000 , 0)
+	Unit:RegisterEvent("hench_slam", 8000, 0)
 end
-
 
 RegisterUnitEvent(594, 0, "hench_OnSpawn")
 
@@ -173,7 +178,7 @@ function evoke_strike(Unit)
 end
 
 function evoke_OnSpawn(Unit, event)
-	Unit:RegisterEvent("evoke_strike",8500 , 0)
+	Unit:RegisterEvent("evoke_strike", 8500, 0)
 	local spruch = math.random(1,2)
 	if (spruch == 1) then
 		Unit:CastSpell(12544)
@@ -182,8 +187,6 @@ function evoke_OnSpawn(Unit, event)
 	end
 end
 
-
-
 RegisterUnitEvent(1729, 0, "evoke_OnSpawn")
 
 function conjure_fire(Unit)
@@ -191,13 +194,7 @@ function conjure_fire(Unit)
 end
 
 function conjure_OnSpawn(Unit, event)
-	Unit:RegisterEvent("evoke_strike",3500 , 0)
+	Unit:RegisterEvent("evoke_strike", 3500, 0)
 end
 
-
-
 RegisterUnitEvent(619, 0, "conjure_OnSpawn")
-
---###################
---#      Bosses     #
---###################
