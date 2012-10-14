@@ -8,7 +8,7 @@ redistributing and/or using this software. Thank you.
 
 ~~End of License Agreement
 -- AscendScripting Staff, February 27, 2009. ]]
-
+--[[
 function Broodlord_Lashlayer_OnCombat(Unit, event)
 --	Unit:SendChatMessage(14, 0, "Need to find out what he says oncombat still")
 	Unit:RegisterEvent("Cleave", 15000, 0)
@@ -64,4 +64,4 @@ end
 	
 RegisterUnitEvent(12017, 1, "Broodlord_Lashlayer_OnCombat")
 RegisterUnitEvent(12017, 2, "Broodlord_Lashlayer_OnLeaveCombat")
-RegisterUnitEvent(12017, 4, "Broodlord_Lashlayer_OnDeath")		
+RegisterUnitEvent(12017, 4, "Broodlord_Lashlayer_OnDeath")]]--		
