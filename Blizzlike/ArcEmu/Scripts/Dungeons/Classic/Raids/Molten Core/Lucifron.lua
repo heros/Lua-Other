@@ -42,9 +42,9 @@ function ShadowShock(Unit,event)
 	Unit:FullCastSpellOnTarget(19460,Unit:GetRandomPlayer(0))
 end
 
-RegisterUnitEvent(12118,1,"Lucifron_OnCombat")
-RegisterUnitEvent(12118,4,"Lucifron_OnDeath")
-RegisterUnitEvent(12118,2,"Lucifron_OnWipe")
+RegisterUnitEvent(12118, 1, "Lucifron_OnCombat")
+RegisterUnitEvent(12118, 4, "Lucifron_OnDeath")
+RegisterUnitEvent(12118, 2, "Lucifron_OnWipe")
 
 --[[
 	FLAMEWALKER's AI
@@ -67,6 +67,6 @@ function LucifronProtector_OnWipe(Unit,event)
 	Unit:RemoveEvents()
 end
 
-RegisterUnitEvent(12119,1,"LucifronProtector_OnCombat")
-RegisterUnitEvent(12119,2,"LucifronProtector_OnWipe")
-RegisterUnitEvent(12119,4,"LucifronProtector_OnDied")
+RegisterUnitEvent(12119, 1, "LucifronProtector_OnCombat")
+RegisterUnitEvent(12119, 2, "LucifronProtector_OnWipe")
+RegisterUnitEvent(12119, 4, "LucifronProtector_OnDied")
