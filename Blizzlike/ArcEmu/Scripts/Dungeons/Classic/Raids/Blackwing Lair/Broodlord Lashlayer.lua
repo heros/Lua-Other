@@ -51,15 +51,10 @@ function Broodlord_Lashlayer_OnLeaveCombat(pUnit, event)
 	pUnit:RemoveEvents()
 end
 
-function Broodlord_Lashlayer_OnKillTarget(pUnit, event)
-	pUnit:RemoveEvents()
-end
-
 function Broodlord_Lashlayer_OnDeath(pUnit, event)
 	pUnit:RemoveEvents()
 end
 
 RegisterUnitEvent(12017, 1, "Broodlord_Lashlayer_OnCombat")
 RegisterUnitEvent(12017, 2, "Broodlord_Lashlayer_OnLeaveCombat")
-RegisterUnitEvent(12017, 3, "Broodlord_Lashlayer_OnKillTarget")
-RegisterUnitEvent(12017, 4, "Broodlord_Lashlayer_OnDeath")		
+RegisterUnitEvent(12017, 4, "Broodlord_Lashlayer_OnDeath")	
