@@ -25,29 +25,33 @@ function Golemagg_OnCombat(Unit,event)
 	Unit:RegisterEvent("Golemagg_EarthQuake", 1000, 1)
 	Unit:RegisterEvent("Golemagg_AttractRager", 1000, 1)
 end
+
 function Golemagg_Trust(Unit,event)
 	local args = getvars(Unit)
 	for k,v in pairs(args.Ragers) do
-		if v ~= nil then
+		if (v ~= nil) then
 			v:FullCastSpell(20553)
 		end
 	end
 end
+
 function Golemagg_PyroBlast(Unit,event)
 	local plr = Unit:GetRandomPlayer(0)
-	if plr ~= nil then
+	if (plr ~= nil) then
 		Unit:FullCastSpellOnTarget(20228,plr)
 	end
 end
+
 function Golemagg_EarthQuake(Unit,event)
-	if Unit:GetHealthPct() <= 10 then
+	if (Unit:GetHealthPct() <= 10) then
 		Unit:CastSpell(19798)
 	else
 		Unit:RegisterEvent("Golemagg_EarthQuake", 500, 1)
 	end
 end
+
 function Golemagg_AttractRager(Unit,event)
-	if Unit:GetHealthPct() <= 10 then
+	if (Unit:GetHealthPct() <= 10) then
 		local args = getvars(Unit)
 		local tbl = Unit:GetInRangePlayers()
 		for k,playerUnit in pairs(tbl) do
@@ -59,15 +63,17 @@ function Golemagg_AttractRager(Unit,event)
 		end
 	end
 end
+
 function Golemagg_OnDied(Unit,event)
 	Unit:RemoveEvents()
 	local args = getvars(Unit)
-	if args.Ragers ~= nil then
+	if (args.Ragers ~= nil) then
 		for k,v in pairs(args.Ragers) do
 			v:Kill(v)
 		end
 	end
 end
+
 function Golemagg_OnWipe(Unit,event)
 	Unit:RemoveEvents()
 end
@@ -86,18 +92,22 @@ function CoreRager_OnCombat(Unit,event)
 	Unit:RegisterEvent("CoreRager_RefuseDeath", 5000, 1)
 	setvars(Unit, args); -- still need to write the changes back
 end
+
 function CoreRager_OnWipe(Unit,event)
 	Unit:RemoveEvents()
 end
+
 function CoreRager_OnDied(Unit,event)
 	Unit:RemoveEvents()
 end
+
 function CoreRager_Mangle(Unit,event)
 	local tank = Unit:GetMainTank()
-	if tank ~= nil then
+	if (tank ~= nil) then
 		Unit:CastSpellOnTarget(19820,tank)
 	end
 end
+
 function CoreRager_RefuseDeath(Unit,event)
 	if (Unit:GetHealthPct() <= 50) then
 		local args = getvars(Unit)
