@@ -1,4 +1,4 @@
-function Sulfuron_OnCombat(Unit,event)
+--[[function Sulfuron_OnCombat(Unit,event)
 	setvars(Unit,{Priests = {}})
 	Unit:RegisterEvent("Sulfuron_Spells", 10000, 0)
 	Unit:RegisterEvent("Sulfuron_Inspire", 15000, 0)
@@ -86,3 +86,4 @@ end
 RegisterUnitEvent(11662,1,"Sulfuron_PriestCombat")
 RegisterUnitEvent(11662,2,"Sulfuron_PriestWipe")
 RegisterUnitEvent(11662,4,"Sulfuron_PriestDied")
+]]--
