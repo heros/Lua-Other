@@ -20,14 +20,14 @@
 
 -- [[ Spells ]] --
 
-CLEAVE = 26350
-TOXIC_VOLLEY = 25812
-POISON_CLOUD = 38718
-ENRAGE = 34624
-CHARGE = 26561
-KNOCKBACK = 26027
-HEAL = 25807
-FEAR = 19408
+local CLEAVE = 26350
+local TOXIC_VOLLEY = 25812
+local POISON_CLOUD = 38718
+local ENRAGE = 34624
+local CHARGE = 26561
+local KNOCKBACK = 26027
+local HEAL = 25807
+local FEAR = 19408
 
 -- % Completed: 0% --
 -- Coming soon --
