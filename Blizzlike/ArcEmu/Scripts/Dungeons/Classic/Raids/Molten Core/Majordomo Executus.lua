@@ -20,7 +20,7 @@ math.randomseed(os.time());
 function Executus_OnCombat(Unit,event, pMisc)
 	setvars(Unit,{Executus = Unit, Executus_Guards = {},DeadGuardCount = 0})
 	local door = Unit:GetGameObjectNearestCoords(735.972412,-1177.861572,-119.109833,177000)
-	if ( door ~= nil) then
+	if (door ~= nil) then
 		door:SetUInt32Value(GAMEOBJECT_STATE, 0)
 		door:SetUInt32Value(GAMEOBJECT_FLAGS,33)
 	end
@@ -42,7 +42,7 @@ end
 function Executus_SubmitCheck(Unit,event)
 	local args = getvars(Unit)
 	local plr = Unit:GetRandomPlayer(0)
-	if args.DeadGuardCount == 9 then
+	if (args.DeadGuardCount == 9) then
 		Unit:SendChatMessage(16,0,"MajorDomo Executus submits")
 		Unit:SetFaction(plr:GetFaction())
 		Unit:Root()
@@ -58,17 +58,17 @@ end
 function Executus_OnWipe(Unit)
 	Unit:RemoveEvents()
 end
+
 function Executus_OnDied(Unit)
 	Unit:RemoveEvents()
 end
 
 function Executus_AoR(Unit,event)
-	print "Aegis of Ragnaros"
 	Unit:FullCastSpell(20620)
 	Unit:RegisterEvent("Executus_AoR",30000, 1)
 end
+
 function  Executus_Teleport(Unit,event)
-	print "Teleport"
 	local plr  = Unit:GetRandomPlayer(0)
 	if (plr ~= nil) and (plr:IsAlive() == true) then
 		Unit:FullCastSpellOnTarget(20534,plr)-- teleport visual
@@ -76,24 +76,23 @@ function  Executus_Teleport(Unit,event)
 	end
 	Unit:RegisterEvent("Executus_Teleport",15000, 1)
 end
+
 function Executus_BlastWave(Unit,event)
-	print"BlastWave"
-	if (Unit:GetInRangePlayersCount())~= nil then
+	if (Unit:GetInRangePlayersCount() ~= nil) then
 		Unit:FullCastSpell(20229)-- Blast Wave.
 	end
 	Unit:RegisterEvent("Executus_BlastWave", 10000, 1)
 end
 
 function Executus_Shields(Unit,event)
-	print "Shields"
 	local args = getvars(Unit)
-	if math.random(0,1) > 0.5 then
+	if (math.random(0,1) > 0.5) then
 		for k,v in pairs(args.Executus_Guards) do
-			Unit:FullCastSpellOnTarget(20619,v)-- Magic Reflection.
+			Unit:FullCastSpellOnTarget(20619, v)-- Magic Reflection.
 		end
 	else
 		for k,v in pairs(args.Executus_Guards)  do
-			v:FullCastSpellOnTarget(21075,v)--Damage Shield
+			v:FullCastSpellOnTarget(21075, v)--Damage Shield
 		end
 	end
 	Unit:RegisterEvent("Executus_Shields", 16000, 1)
@@ -109,90 +108,99 @@ RegisterUnitEvent(12018, 21,"Executus_SubmitCheck")
 function FlameHealer_OnCombat(Unit,event)
 	local tbl = Unit:GetInRangeFriends()
 	for k,v in pairs(tbl) do
-		if v:GetEntry() == 12018 then
-			Unit:RegisterEvent("FlameHealer_ShadowBolt", math.random(7000,8000), 1)
-			Unit:RegisterEvent("FlameHealer_GreaterHeal", math.random(10000,12000), 1)
+		if (v:GetEntry() == 12018) then
+			Unit:RegisterEvent("FlameHealer_ShadowBolt", math.random(7000, 8000), 1)
+			Unit:RegisterEvent("FlameHealer_GreaterHeal", math.random(10000, 12000), 1)
 			break
 		end
 	end
 end
+
 function FlameHealer_OnWipe(Unit,event)
 	Unit:RemoveEvents()
 end
+
 function FlameHealer_OnDied(Unit,event)
 	local changed = false;
 	Unit:RemoveEvents()
 	local args = getvars(Unit) -- moved here, don't need to refresh it every loop as the changes will only apply to 'args', not the gloabls, until you write args back to the globals.
 	local tbl = Unit:GetInRangeFriends()
 	for k,v in pairs(tbl) do
-		if v:GetEntry() == 12018 then
+		if (v:GetEntry() == 12018) then
 		for k,v in pairs(args.Executus_Guards) do
-				if v == Unit then
-					table.remove(args.Executus_Guards,k)
+				if (v == Unit) then
+					table.remove(args.Executus_Guards, k)
 					changed = true;
 				end
 			end
 		end
 	end
 	-- if nothing was changed in the args class then don't write anything back (makes for less work, and a 'bit' of a speed boost)
-	if (changed == true) then setvars(Unit,args); end
+	if (changed == true) then 
+		setvars(Unit,args); 
+	end
 end
 function FlameHealer_ShadowBolt(Unit,event)
 	local plr = Unit:GetRandomPlayer(0)
 	if (plr ~= nil) and (plr:IsAlive() == true) then
 		Unit:StopMovement(500)
-		Unit:FullCastSpellOnTarget(21077,plr)-- Shadow Bolt
+		Unit:FullCastSpellOnTarget(21077, plr)-- Shadow Bolt
 	end
-	Unit:RegisterEvent("FlameHealer_ShadowBolt",  math.random(7000,8000), 1)
+	Unit:RegisterEvent("FlameHealer_ShadowBolt",  math.random(7000, 8000), 1)
 end
 function FlameHealer_GreaterHeal(Unit,event)
 	local args = getvars(Unit)
 	if (args.Executus_Guards ~= nil) then
 		local tblend = table.getn(args.Executus_Guards)
 		Unit:StopMovement(2500)
-		Unit:FullCastSpellOnTarget(29564,args.Executus_Guards[math.random(1,tblend)])
+		Unit:FullCastSpellOnTarget(29564, args.Executus_Guards[math.random(1, tblend)])
 	end
-	Unit:RegisterEvent("FlameHealer_GreaterHeal",math.random(10000,12000),1)
+	Unit:RegisterEvent("FlameHealer_GreaterHeal", math.random(10000, 12000), 1)
 end
 
-RegisterUnitEvent(11663,1,"FlameHealer_OnCombat")
-RegisterUnitEvent(11663,2,"FlameHealer_OnWipe")
-RegisterUnitEvent(11663,4,"FlameHealer_OnDied")
+RegisterUnitEvent(11663, 1, "FlameHealer_OnCombat")
+RegisterUnitEvent(11663, 2, "FlameHealer_OnWipe")
+RegisterUnitEvent(11663, 4, "FlameHealer_OnDied")
 
 function FlameElite_OnCombat(Unit,event)
 	local tbl = Unit:GetInRangeFriends()
 	for k,v in pairs(tbl) do
-		if v:GetEntry() == 12018 then
+		if (v:GetEntry() == 12018) then
 			Unit:RegisterEvent("ExecutusFlameElite_Spells", 10000, 0)
 			break
 		end
 	end
 end
+
 function FlameElite_OnWipe(Unit,event)
 	Unit:RemoveEvents()
 end
+
 function FlameElite_OnDead(Unit,event)
 	local changed = false;
 	Unit:RemoveEvents()
 	local args = getvars(Unit)
 	local tbl = Unit:GetInRangeFriends()
 	for k,v in pairs(tbl) do
-		if v:GetEntry() == 12018 then
+		if (v:GetEntry() == 12018) then
 			for k,v in pairs(args.Executus_Guards) do
-				if v == Unit then
+				if (v == Unit) then
 					table.remove(args.Executus_Guards,k)
 					changed = true;
 				end
 			end
 		end
 	end
-	if (changed == true) then setvars(Unit,args); end
+	if (changed == true) then 
+		setvars(Unit,args); 
+	end
 end
+
 function ExecutusFlameElite_Spells(Unit,event)
 	local plr = Unit:GetRandomPlayer(0)
 	if (plr ~= nil) and (plr:IsAlive() == true) then
-		if math.random(0,1) > 0.5 then
-			Unit:FullCastSpellOnTarget(20623,plr)-- FIRE BLAST
+		if (math.random(0,1) > 0.5) then
+			Unit:FullCastSpellOnTarget(20623, plr)-- FIRE BLAST
 		else
 			Unit:FullCastSpell(20229) -- Blast Wave
 		end
