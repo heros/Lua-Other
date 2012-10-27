@@ -31,3 +31,4 @@ end
 RegisterUnitEvent(6243, 1, "Gelihast_OnCombat")
 RegisterUnitEvent(6243, 2, "Gelihast_OnLeaveCombat")
 RegisterUnitEvent(6243, 3, "Gelihast_OnDeath")
+RegisterUnitEvent(6243, 3, "Gelihast_OnDeath")

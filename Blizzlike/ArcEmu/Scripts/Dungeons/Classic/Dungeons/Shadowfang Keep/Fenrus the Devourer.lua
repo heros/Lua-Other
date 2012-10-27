@@ -17,7 +17,11 @@
 ========================================]]--
 
 function Puppy_Chill(Unit, Player, Event)
+<<<<<<< HEAD
 	Unit:CastSpell(21098)
+=======
+ Unit:CastSpell(21098)
+>>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
 end
 
 function Puppy_Volly(Unit, Player, Event)

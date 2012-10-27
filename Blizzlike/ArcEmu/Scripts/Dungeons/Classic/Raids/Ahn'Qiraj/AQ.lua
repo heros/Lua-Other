@@ -18,7 +18,11 @@
 
 --Anubisath Defender by Project eXa
 function Defender_ExplodeTwo(pUnit, event) --Fix for broken spell.
+<<<<<<< HEAD
 	pUnit:CastSpell(25699)
+=======
+ pUnit:CastSpell(25699)
+>>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
 end
 
 function Defender_Explode(pUnit, Event)

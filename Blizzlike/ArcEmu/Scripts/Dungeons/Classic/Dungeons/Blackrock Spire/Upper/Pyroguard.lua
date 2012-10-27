@@ -21,7 +21,11 @@ local door2 = 175153
 
 function Pyroguard_Event(Unit, event)
         local go =  Unit:GetGameObjectNearestCoords(114.407143, -258.893585, 91.548134, door2)
+<<<<<<< HEAD
 		if (go ~= nil) then
+=======
+        	if (go ~= nil) then
+>>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
                 go:SetUInt32Value(GAMEOBJECT_FLAGS, GAMEOBJECT_UNCLICKABLE)
         end
         local pyro = Unit:GetCreatureNearestCoords(144.401993, -258.036987, 96.323303, pyroguard)
