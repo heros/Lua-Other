@@ -5,8 +5,8 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Blessing of Blackfathom (the altar behind him)
 Net-6533
 ]]--
@@ -30,4 +30,5 @@ end
  
 RegisterUnitEvent(6243, 1, "Gelihast_OnCombat")
 RegisterUnitEvent(6243, 2, "Gelihast_OnLeaveCombat")
+RegisterUnitEvent(6243, 3, "Gelihast_OnDeath")
 RegisterUnitEvent(6243, 3, "Gelihast_OnDeath")
