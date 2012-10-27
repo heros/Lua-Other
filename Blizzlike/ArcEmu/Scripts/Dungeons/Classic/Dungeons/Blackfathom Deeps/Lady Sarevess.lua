@@ -5,17 +5,19 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Lady Sarevess yells: You should not be here! Slay them!
-[[Spells-ID]]
+5799	A_Lady Serevess Aggro01
+5801	A_Lady Sarevess Slay01
+----Spells-ID
 Forked Lightning-8435
 Shoot-6660
 Slow-246
 ]]--
 
 function LadySarevess_OnCombat(pUnit, event)
-	pUnit:PlaySoundToSet(5801)
 	pUnit:SendChatMessage(12, 0, "You should not be here! Slay them!")
+	pUnit:PlaySoundToSet(5801)
 	pUnit:RegisterEvent("LadySarevess_ForkedLightning", 5000, 0)
 	pUnit:RegisterEvent("LadySarevess_Shoot", 1, 0)
 	pUnit:RegisterEvent("LadySarevess_Slow", 1000, 0)
