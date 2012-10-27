@@ -1,3 +1,10 @@
+-------------------------------------------------------------------
+-- This script is created by zdroid9770; please do not edit this --
+-- script and claim it as your own, as of All rights are claimed --
+-- by me.                                                        --
+--                     Copyright© zdroid9770					 --
+-------------------------------------------------------------------
+
 function RazorLash_OnCombat(pUnit, event)
 	pUnit:RegisterEvent("RazorLashphase1", 1000, 0)
 	pUnit:RegisterEvent("RazorLashFaerieFire", 6000, 0)
@@ -75,7 +82,6 @@ function RazorLashphase6(pUnit, event)
 		pUnit:RegisterEvent("RazorLashMassRoot", 18000, 0)
 	end
 end
-
 
 function RazorLashFaerieFire(pUnit, event)
 	pUnit:FullCastSpellOnTarget(21670, pUnit:GetRandomPlayer(0))

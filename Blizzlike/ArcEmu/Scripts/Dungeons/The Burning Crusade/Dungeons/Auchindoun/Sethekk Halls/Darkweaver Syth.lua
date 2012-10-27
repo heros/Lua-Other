@@ -1,6 +1,6 @@
 local mod = getfenv(1)
 assert(mod)
-module(mod._NAME..".DARKWEAVER_SYTH",package.seeall)
+--module(mod._NAME..".DARKWEAVER_SYTH",package.seeall)
 local self = getfenv(1)
 
 function OnCombat(unit,_,mTarget)

@@ -36,7 +36,6 @@ function Radioactive_mg_OnDied(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(6234, 1, "Radioactive_mg_OnCombat")
-RegisterpUnitEvent(6234, 2, "Radioactive_mg_OnLeaveCombat")
-RegisterpUnitEvent(6234, 3, "Radioactive_mg_OnKilledTarget")
-RegisterpUnitEvent(6234, 4, "Radioactive_mg_OnDied")
+RegisterUnitEvent(6234, 1, "Radioactive_mg_OnCombat")
+RegisterUnitEvent(6234, 2, "Radioactive_mg_OnLeaveCombat")
+RegisterUnitEvent(6234, 4, "Radioactive_mg_OnDied")

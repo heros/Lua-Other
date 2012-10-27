@@ -21,5 +21,4 @@ end
 
 RegisterUnitEvent(36830, 1, "Wrathbonelaborer_OnCombat")
 RegisterUnitEvent(36830, 2, "Wrathbonelaborer_OnLeaveCombat")
-RegisterUnitEvent(36830, 3, "Wrathbonelaborer_OnKillPlr")
 RegisterUnitEvent(36830, 4, "Wrathbonelaborer_OnDeath")

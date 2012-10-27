@@ -6,12 +6,12 @@
 -------------------------------------------------------------------
 --[[
 Omokk's head, when placed on a [Roughshod Pike], can be used to challenge Urok Doomhowl.
-[[Quotes]]
+----Quotes
 Highlord Omokk says: I'll crush you!
 Highlord Omokk says: Me smash! You die!
 Highlord Omokk says: Raaar!!! Me smash blood elf!
 Highlord Omokk says: Raaar!!! Me smash human!
-[[Spells-ID]]
+----Spells-ID
 Frenzy-8269
 Knock Away-10101
 ]]--

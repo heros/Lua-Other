@@ -15,17 +15,14 @@
    Original Code by DARKI
    Version 1
 ========================================]]--
--- % Completed: 50
--- Comments: 
+-- % Completed: 20
+-- Comments: Missing Whole Script
 
 -- [[Spells ]] --
 local CURSEOFBLOOD = 24673
 local ILLUSION = 17773
 local CLEAVE = 15584
 
-
-
--- [[ Functions ]] --
 function Jandice_OnCombat(Unit, Event)
 end
 
@@ -33,15 +30,10 @@ function Jandice_OnLeaveCombat(Unit, Event)
 	Unit:RemoveEvents()
 end
 
-function Jandice_OnKilledTarget(Unit, Event)
-end
-
 function Jandice_OnDied(Unit, Event)
 	Unit:RemoveEvents()
 end
 
--- [[ Registering ]] --
 RegisterUnitEvent(10503, 1, "Jandice_OnCombat")
 RegisterUnitEvent(10503, 2, "Jandice_OnLeaveCombat")
-RegisterUnitEvent(10503, 3, "Jandice_OnKilledTarget")
 RegisterUnitEvent(10503, 4, "Jandice_OnDied")

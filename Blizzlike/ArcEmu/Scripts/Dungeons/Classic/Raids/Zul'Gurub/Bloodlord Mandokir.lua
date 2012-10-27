@@ -14,7 +14,6 @@ redistributing and/or using this software. Thank you.
 ]]
 --.worldport 309 -12211.674805 -1960.163208 132.326385
 math.randomseed(os.time())
-RegisterUnitEvent(11391, 4, "VileBranch_SpeakerOnDeath")
 function VileBranch_SpeakerOnDeath(Unit,event)
 	local BLord = Unit:GetCreatureNearestCoords(-12167.799805,-1927.250000,153.830002,11382)
 	BLord:SetCombatTargetingCapable(1)
@@ -27,12 +26,6 @@ end
 --[[
 	HOOKED EVENTS BEGIN
 	]]
-	
-RegisterUnitEvent(11382,1,"BloodLord_OnCombat")
-RegisterUnitEvent(11382,2,"BloodLord_OnWipe")
-RegisterUnitEvent(11382,3,"BloodLord_OnKilledTarget")
-RegisterUnitEvent(11382,4,"BloodLord_OnDeath")
-RegisterUnitEvent(11382,19,"BloodLord_OnReachWp")
 function BloodLord_OnReachWp(Unit,event,pMisc)
 	Unit:SetCombatTargetingCapable(0)
 	Unit:SetCombatCapable(0)
@@ -77,7 +70,7 @@ function BloodLord_OnWipe(Unit,event)
 	end
 		
 end
-function BloordLord_OnKilledTarget(Unit,event,pMisc)
+function BloodLord_OnKilledTarget(Unit,event,pMisc)
 	local args = getvars(Unit)
 	table.insert(args.deadplayers,pMisc)
 	Unit:RegisterEvent("BloodLord_Ding",500, 1)
@@ -89,6 +82,7 @@ function BloodLord_OnDeath(Unit,event)
 		v:RemoveFromWorld()
 	end
 end
+
 --[[
 	HOOKED EVENTS END
 	]]
@@ -187,8 +181,6 @@ end
 --[[
 	Ohgans AI
 	]]
-RegisterUnitEvent(14988,1,"Ohgan_OnCombat")
-RegisterUnitEvent(14988, 4,"Ohgan_OnDied")
 function Ohgan_OnCombat(Unit)
 	Unit:RegisterEvent("Ohgan_Spells",10000, 0)
 end
@@ -213,7 +205,6 @@ end
 --[[
 	Spirits AI
 	]]
-RegisterUnitEvent(15117,18,"ChainedSpirit_OnSpawn")
 function ChainedSpirit_OnSpawn(Unit,event)
 	Unit:SetUInt32Value(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_ATTACKABLE_2)
 	Unit:SetUInt32Value(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE)
@@ -240,7 +231,6 @@ function ChainedSpirit_PlrCheck(Unit,event)
 		end
 	end
 end
-RegisterUnitEvent(15117,19,"ChainedSpirits_OnReachWp")
 function ChainedSpirits_OnReachWp(Unit,event,pMisc,waypoint)
 		Unit:DestroyCustomWaypointMap()
 		local plr = Unit:GetNextTarget()
@@ -250,3 +240,13 @@ function ChainedSpirits_OnReachWp(Unit,event,pMisc,waypoint)
 		Unit:ReturnToSpawnPoint()
 end
 
+RegisterUnitEvent(11391, 4, "VileBranch_SpeakerOnDeath")
+RegisterUnitEvent(14988,1,"Ohgan_OnCombat")
+RegisterUnitEvent(14988, 4,"Ohgan_OnDied")
+RegisterUnitEvent(11382,1,"BloodLord_OnCombat")
+RegisterUnitEvent(11382,2,"BloodLord_OnWipe")
+RegisterUnitEvent(11382,3,"BloodLord_OnKilledTarget")
+RegisterUnitEvent(11382,4,"BloodLord_OnDeath")
+RegisterUnitEvent(11382,19,"BloodLord_OnReachWp")
+RegisterUnitEvent(15117,19,"ChainedSpirits_OnReachWp")
+RegisterUnitEvent(15117,18,"ChainedSpirit_OnSpawn")

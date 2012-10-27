@@ -31,16 +31,17 @@ end
 function Rage(pUnit, Event)
 	pUnit:CastSpell(47008)
 	pUnit:SendChatMessage(12, 0, "Fun time over!")
+end
 
-function gut_OnTargetDied
+function gut_OnTargetDied(pUnit, Event)
 	pUnit:SendChatMessage(12, 0, "Daddy, I did it!")
 end
 
-function gut_OnLeave
+function gut_OnLeave(pUnit, Event)
 	pUnit:RemoveEvent()
 end
 
-function gut_OnDie
+function gut_OnDied(pUnit, Event)
 local chance = math.random(1,3)
 	if(chance == 1) then
 		pUnit:SendChatMessage(12, 0, "Da...Ddy...")

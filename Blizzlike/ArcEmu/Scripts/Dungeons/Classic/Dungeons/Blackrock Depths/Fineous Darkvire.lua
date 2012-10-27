@@ -5,8 +5,8 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Devotion Aura-8258
 Holy Light-15493
 Holy Strike-13953

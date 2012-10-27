@@ -134,6 +134,6 @@ function WarlockAlythess_OnDied(pUnit, Event)
 end
 
 RegisterUnitEvent(25166, 1, "WarlockAlythess_OnCombat")
-RegisterUnitEvent(25166, 2, "WarlockAlythess_OnleaveCombat")
+RegisterUnitEvent(25166, 2, "WarlockAlythess_OnLeaveCombat")
 RegisterUnitEvent(25166, 3, "WarlockAlythess_OnKilledTarget")
 RegisterUnitEvent(25166, 4, "WarlockAlythess_OnDied")

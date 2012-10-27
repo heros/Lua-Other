@@ -5,11 +5,11 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Ambassador Flamelash yells: Your reign of terror ends now! Face your doom mortals!
-[[Spells-ID]]
+----Spells-ID
 Burning Spirit-14744
-[[Other]]
+----Other
 Summon Burning Spirits (Fire elementals that are capable of healing him.)
 Immune to Stun.
 ]]--

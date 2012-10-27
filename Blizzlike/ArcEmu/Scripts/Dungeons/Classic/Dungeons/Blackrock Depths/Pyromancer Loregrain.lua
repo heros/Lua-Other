@@ -5,8 +5,8 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Fire Ward-15041
 Flame Shock-15616
 Molten Blast-15095

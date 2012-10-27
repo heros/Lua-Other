@@ -1,5 +1,5 @@
 local mod = getfenv(1)
-module(mod._NAME..".PANDEMONIUS",package.seeall)
+--module(mod._NAME..".PANDEMONIUS",package.seeall)
 local self = getfenv(1)
 --Delete ai agent conflicts
 WorldDBQuery("DELETE FROM ai_agents WHERE `entry` = \"18341\";")

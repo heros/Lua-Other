@@ -5,12 +5,12 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Leprous Assistant says: A foul trogg if ever I saw one. Die!
 Leprous Assistant says: No gnome will be left behind.
 Leprous Assistant says: The troggs...they never stop coming. Die trogg! Die!
 Leprous Assistant says: This sickness clouds my vision, but I know you must be a trogg. Die foul invader!
-[[Spells-ID]]
+----Spells-ID
 Dazed-1604
 Ice Blast-11264
 Net-12024
@@ -54,6 +54,6 @@ function radioactive_ea_OnDied(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(7603, 1, "radioactive_ea_OnCombat")
-RegisterpUnitEvent(7603, 2, "radioactive_ea_OnLeaveCombat")
-RegisterpUnitEvent(7603, 4, "radioactive_ea_OnDied")
+RegisterUnitEvent(7603, 1, "radioactive_ea_OnCombat")
+RegisterUnitEvent(7603, 2, "radioactive_ea_OnLeaveCombat")
+RegisterUnitEvent(7603, 4, "radioactive_ea_OnDied")

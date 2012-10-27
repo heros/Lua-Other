@@ -5,8 +5,8 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Corrosive Ooze-9459
 ]]--
 
@@ -33,6 +33,6 @@ function corrosive_lurker_OnDied(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(6219, 1, "corrosive_lurker_OnCombat")
-RegisterpUnitEvent(6219, 2, "corrosive_lurker_OnLeaveCombat")
-RegisterpUnitEvent(6219, 4, "corrosive_lurker_OnDied")
+RegisterUnitEvent(6219, 1, "corrosive_lurker_OnCombat")
+RegisterUnitEvent(6219, 2, "corrosive_lurker_OnLeaveCombat")
+RegisterUnitEvent(6219, 4, "corrosive_lurker_OnDied")

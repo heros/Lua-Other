@@ -5,8 +5,8 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Earth Shock-13728
 Flame Shock-13729
 Ground Tremor-6524

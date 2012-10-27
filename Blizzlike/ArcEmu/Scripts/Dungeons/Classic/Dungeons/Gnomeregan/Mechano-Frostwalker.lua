@@ -36,6 +36,6 @@ function Radioactive_frostwalker_OnDied(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(6227, 1, "Radioactive_frostwalker_OnCombat")
-RegisterpUnitEvent(6227, 2, "Radioactive_frostwalker_OnLeaveCombat")
-RegisterpUnitEvent(6227, 4, "Radioactive_frostwalker_OnDied")
+RegisterUnitEvent(6227, 1, "Radioactive_frostwalker_OnCombat")
+RegisterUnitEvent(6227, 2, "Radioactive_frostwalker_OnLeaveCombat")
+RegisterUnitEvent(6227, 4, "Radioactive_frostwalker_OnDied")

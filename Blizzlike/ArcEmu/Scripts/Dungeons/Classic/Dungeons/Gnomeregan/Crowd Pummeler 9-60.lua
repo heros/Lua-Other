@@ -5,8 +5,8 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Arcing Smash-16169
 Arcing Smash-8374
 Crowd Pummel-10887
@@ -44,6 +44,6 @@ function Crowd_OnDied(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(6229, 1, "Crowd_OnCombat")
-RegisterpUnitEvent(6229, 2, "Crowd_OnLeaveCombat")
-RegisterpUnitEvent(6229, 4, "Crowd_OnDied")
+RegisterUnitEvent(6229, 1, "Crowd_OnCombat")
+RegisterUnitEvent(6229, 2, "Crowd_OnLeaveCombat")
+RegisterUnitEvent(6229, 4, "Crowd_OnDied")

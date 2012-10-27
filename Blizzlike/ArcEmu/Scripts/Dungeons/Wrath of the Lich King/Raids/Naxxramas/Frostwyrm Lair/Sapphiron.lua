@@ -44,7 +44,6 @@ function Sapphiron_OnCombat(Unit, event)
 	Unit:RegisterEvent("Sapphiron_FrostAura", 2000, 0)
 	--TESTING AI TICK Unit:RegisterEvent("Sapphiron_CloseToDeath", 500, 0)
 end
-RegisterGameObjectEvent(181225, 2, "Close")
 
 function Close(Unit)
 	print "working xd"
@@ -53,7 +52,6 @@ function Close(Unit)
 	setvars(Unit,args)
 	Unit:SetUInt32Value(GAMEOBJECT_STATE,1)
 end
-RegisterUnitEvent(15989,7,"Sapphiron_CloseToDeath")
 
 function Sapphiron_CloseToDeath(Unit, event)
 	print "works"
@@ -134,7 +132,6 @@ function Circle(Unit,event)
 	Unit:SpawnCreature(16082,args.x,args.y,args.z,args,Unit:GetO(),15000)
 end
 
-RegisterUnitEvent(16082,5,"ChillTrigger")
 function ChillTrigger(Trigger,event)
 	print "Yes OnSpawn for Creature works xD"
 	local args = getvars(Unit)
@@ -212,8 +209,6 @@ function Fly4(Unit,event)
 	end
 end
 
-RegisterUnitEvent(17025,5,"WingBuffet")
-
 function WingBuffet(Unit,event)
 	print "WingBuffet initiated"
 	local args = getvars(Unit)
@@ -237,7 +232,6 @@ function ImmunityCheck(Unit,event)
 	--setvars(Unit,args); should be in the for loop to avoid unnecessary work
 end
 
-RegisterGameObjectEvent(181247,2,"LoS")
 function LoS(Unit,event)
 	print "OnSpawn works"
 	local args = getvars(Unit)
@@ -262,8 +256,8 @@ function Sapphiron_CastFrostBreath(Unit, event)
 	Unit:SpawnCreature(15624,Unit:GetX(),Unit:GetY(),Unit:GetZ(),Unit:GetO(),Unit:GetFaction(),0)
 	Unit:RegisterEvent("Sapphiron_Land", 8000, 1)
 end
+
 ---------------FROST BREATH DUMMY TRIGGER----------------
-RegisterUnitEvent(15624,5,"Trigger")
 function Trigger(Unit,event)
 	local args = getvars(Unit)
 	args.FrostTrigger = Unit
@@ -285,6 +279,8 @@ function TriggerStopped(Unit,event)
 		Unit:RegisterEvent("TriggerStopped",500,1)
 	end
 end
+
+RegisterUnitEvent(15624,5,"Trigger")
 ----------------------------------------------------------------------------
 
 function Sapphiron_Land(Unit, event)
@@ -340,7 +336,11 @@ function Sapphiron_OnDied(Unit)
 	--setvars(Unit,true) this will be taken care of in the OnLeaveCombat so no need to do it twice.
 end
 
-
+RegisterUnitEvent(17025,5,"WingBuffet")
+RegisterGameObjectEvent(181225, 2, "Close")
+RegisterUnitEvent(15989,7,"Sapphiron_CloseToDeath")
+RegisterUnitEvent(16082,5,"ChillTrigger")
+RegisterGameObjectEvent(181247,2,"LoS")
 RegisterUnitEvent(15989, 1, "Sapphiron_OnCombat")
 RegisterUnitEvent(15989, 2, "Sapphiron_OnLeaveCombat")
 RegisterUnitEvent(15989, 4, "Sapphiron_OnDied")

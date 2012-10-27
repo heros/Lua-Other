@@ -40,6 +40,6 @@ function Radioactive_VF_OnDied(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(7079, 1, "Radioactive_VF_OnCombat")
-RegisterpUnitEvent(7079, 2, "Radioactive_VF_OnLeaveCombat")
-RegisterpUnitEvent(7079, 4, "Radioactive_VF_OnDied")
+RegisterUnitEvent(7079, 1, "Radioactive_VF_OnCombat")
+RegisterUnitEvent(7079, 2, "Radioactive_VF_OnLeaveCombat")
+RegisterUnitEvent(7079, 4, "Radioactive_VF_OnDied")

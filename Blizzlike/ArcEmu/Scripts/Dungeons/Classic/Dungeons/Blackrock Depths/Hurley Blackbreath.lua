@@ -5,10 +5,10 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Hurley Blackbreath yells: Get away from those kegs!
 Hurley Blackbreath says: You'll pay for that!
-[[Spells-ID]]
+----Spells-ID
 Drunken Rage-14872
 Flame Breath-9573
 ]]--

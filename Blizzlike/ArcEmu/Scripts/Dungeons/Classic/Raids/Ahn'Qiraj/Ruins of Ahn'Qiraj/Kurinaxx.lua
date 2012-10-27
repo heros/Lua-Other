@@ -19,18 +19,16 @@
 Oh, and it doesnt appear near the target but near the caster xX  (and yes, I tested all SandTrap spells) But I will include it anyways, just commented out. 
 Feel free to test it and tell me your ideas. I could spawn a dummy near the player that casts it and despawns? That'd actually be an idea!]]--
 
-cleave = 0
+local cleave = 0
 
 function KuriOnCombat(Unit, event)
-	print "Kurinaxx combat started!"
 	--Unit:RegisterEvent("KuriSandTrap", 8000, 0)
 	Unit:RegisterEvent("KuriCleave", 3500, 0)
 end
 
 function KuriCleave(Unit, event)
 	if cleave == 3 then
-	Unit:ClearThreatList()
-	print "Threatlist cleared"
+		Unit:ClearThreatList()
 	else
 	end
 	--Mortal wound... 28467 should be the right one. Its not a real cleave but this one deals damage and afflicts the "Mortal Wound" debuff to the target
@@ -39,12 +37,12 @@ function KuriCleave(Unit, event)
 end
 
 function KuriSandTrap(Unit, event)
-	local player = Unit:GetRandomPlayer(0)
+local player = Unit:GetRandomPlayer(0)
+local Xpos = player:GetX()
+local Ypos = player:GetY()
+local Zpos = player:GetZ()
 	if(player ~= nil) then
-	local Xpos = player:GetX()
-	local Ypos = player:GetY()
-	local Zpos = player:GetZ()
-	Unit:SpawnCreature(90007, Xpos, Ypos, Zpos, 0, 168, 10000)
+		Unit:SpawnCreature(90007, Xpos, Ypos, Zpos, 0, 168, 10000)
 	else
 	end
 end
@@ -71,12 +69,10 @@ function DummyTimerCheck(Unit, event)
 end
 ]]
 function KuriOnLeaveCombat(Unit)
-	print "Kurinaxx Wipe"
 	Unit:RemoveEvents()
 end
 
 function KuriOnDied(Unit)
-	print "Kurinaxx killed"
 	Unit:RemoveEvents()
 end
 

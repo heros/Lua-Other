@@ -5,9 +5,9 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Golem Lord Argelmach says: Intruders in the Manufactory? My constructs will destroy you!
-[[Spells-ID]]
+----Spells-ID
 Chain Lightning-15305
 Lightning Shield-15507
 Shock-15605

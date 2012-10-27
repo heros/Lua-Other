@@ -5,8 +5,8 @@
 --                     Copyright (c) zdroid9770                  --
 --------------------------------------------------------------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Heal-15586
 Mind Blast-15587
 Renew-8362

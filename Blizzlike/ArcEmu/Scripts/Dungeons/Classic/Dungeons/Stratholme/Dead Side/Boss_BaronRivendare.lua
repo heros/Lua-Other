@@ -25,10 +25,8 @@ local RAISEDEAD = 17475
 local DEATHPACT = 17698
 local SUMMONSKELETONS = 17274
 
-
--- [[ Functions ]] --
 function Baron_OnCombat(Unit, Event)
-	say=math.random(1, 6)
+	local say = math.random(1, 6)
 	if (say==1) then
 		Unit:SendChatMessage(12, 0, "Invaders! Undoubtedly more henchmen Argentumd \ 195 \ 164mmerung. It is already one of them in my imprisonment. Pulls you out of my Dom \ 195 \ 164ne to \ 195 \ 188ck, executed before I leave!") -- blizzlike
 	end
@@ -47,10 +45,10 @@ function Baron_OnCombat(Unit, Event)
 	if (say==6) then
 		Unit:SendChatMessage(12, 0, "Time to take matters into my own hands. Come. Enter my domain and challenge the might of the Scourge!") -- German Translation is missing
 	end
-	shadowbolt=5000+math.random(1,5000)
-	cleave=8000+math.random(1,4000)
-	mortal=12000+math.random(1,4000)
-	raise=30000+math.random(1,15000)
+	local shadowbolt = 5000+math.random(1,5000)
+	local cleave = 8000+math.random(1,4000)
+	local mortal = 12000+math.random(1,4000)
+	local raise = 30000+math.random(1,15000)
 	Unit:RegisterEvent("Baron_Shadowbolt", shadowbolt, 0)
 	Unit:RegisterEvent("Baron_Cleave", cleave, 0)
 	Unit:RegisterEvent("Baron_Mortalstrike", mortal, 0)
@@ -59,25 +57,25 @@ function Baron_OnCombat(Unit, Event)
 end
 
 function Baron_Shadowbolt(Unit, Event)
-	shadow_chance=math.random(1,100)
+	local shadow_chance = math.random(1,100)
 	if (shadow_chance < 70) then -- 70% Chance to cast
-		RandomPlayer=Unit:GetRandomPlayer()
+		local RandomPlayer = Unit:GetRandomPlayer()
 		Unit:FullCastSpellOnTarget(SHADOWBOLT, RandomPlayer)
 	end
 end
 
 function Baron_Cleave(Unit, Event)
-	cleave_chance=math.random(1,100)
+	local cleave_chance = math.random(1,100)
 	if (cleave_chance < 55) then -- 55% Chance to cast
-		RandomPlayer=Unit:GetRandomPlayer()
+		local RandomPlayer = Unit:GetRandomPlayer()
 		Unit:FullCastSpellOnTarget(CLEAVE, RandomPlayer)
 	end
 end
 
 function Baron_Mortalstrike(Unit, Event)
-	mortal_chance=math.random(1,100)
+	local mortal_chance=math.random(1,100)
 	if (mortal_chance < 30) then -- 30% Chance to cast
-		RandomPlayer=Unit:GetRandomPlayer()
+		local RandomPlayer = Unit:GetRandomPlayer()
 		Unit:FullCastSpellOnTarget(MORTALSTRIKE, RandomPlayer)
 	end
 end
@@ -99,17 +97,10 @@ function Baron_OnLeaveCombat(Unit, Event)
 	Unit:RemoveEvents()
 end
 
-function Baron_OnKilledTarget(Unit, Event)
-end
-
 function Baron_OnDied(Unit, Event)
 	Unit:RemoveEvents()
 end
 
-
-
--- [[ Registering ]] --
 RegisterUnitEvent(10440, 1, "Baron_OnCombat")
 RegisterUnitEvent(10440, 2, "Baron_OnLeaveCombat")
-RegisterUnitEvent(10440, 3, "Baron_OnKilledTarget")
 RegisterUnitEvent(10440, 4, "Baron_OnDied")

@@ -18,7 +18,7 @@ redistributing and/or using this software. Thank you.
 math.randomseed(os.time())
 
 function RammsteinTheGorger_Trample(pUnit)
-        pUnit:FullCastSpell(15550)
+    pUnit:FullCastSpell(15550)
 end
 
 function RammsteinTheGorger_Knockout(pUnit)
@@ -29,12 +29,12 @@ end
 
 function RammsteinTheGorger_OnCombat(pUnit)
 	pUnit:SendChatMEssage(12, 0, "Ramstein the Gorger yells: Ramstein hunger for flesh!")
-        pUnit:RegisterEvent("RammsteinTheGorger_Trample",math.random(10000,13000),0)
-		pUnit:RegisterEvent("RammsteinTheGorger_Knockout",math.random(18000,23000),0)
+    pUnit:RegisterEvent("RammsteinTheGorger_Trample",math.random(10000,13000),0)
+	pUnit:RegisterEvent("RammsteinTheGorger_Knockout",math.random(18000,23000),0)
 end
 
 function RammsteinTheGorger_LeaveCombat(pUnit)
-        pUnit:RemoveEvents()
+    pUnit:RemoveEvents()
 end
 
 function RammsteinTheGorger_OnDied(pUnit)

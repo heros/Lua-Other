@@ -1,6 +1,6 @@
 local mod = getfenv(1)
 assert(type(mod) == "table")
-module(mod._NAME..".SHAFFAR",package.seeall)
+--module(mod._NAME..".SHAFFAR",package.seeall)
 local self = getfenv(1)
 WorldDBQuery("DELETE FROM ai_agents WHERE entry = 18344;")
 

@@ -5,9 +5,9 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Lord Incendius says: I cannot be destroyed! By the will of Ragnaros, I shall be reborn!
-[[Spells-ID]]
+----Spells-ID
 Curse of the Elemental Lord-26977
 Fiery Burst-13900
 Fire Storm-13899

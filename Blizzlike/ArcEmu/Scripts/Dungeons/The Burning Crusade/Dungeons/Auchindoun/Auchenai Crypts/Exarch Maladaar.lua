@@ -1,6 +1,6 @@
 local mod = getfenv(1)
 assert(mod)
-module(mod._NAME..".EXARCH_MALADAAR",package.seeall)
+--module(mod._NAME..".EXARCH_MALADAAR",package.seeall)
 local self = getfenv(1)
 
 function OnCombat(unit)

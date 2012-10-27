@@ -5,8 +5,8 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Enrage-15061
 Flurry-17687
 Sunder Armor-15572
@@ -19,7 +19,7 @@ function GAF_OnCombat(pUnit, Event)
 end
 
 function GAF_Enrage(pUnit, Event)
-	if (pUnit:GetHealthPct >= 30) then
+	if (pUnit:GetHealthPct() >= 30) then
 		pUnit:SpawnCreature(8894, pUnit:GetX(), pUnit:GetY(),pUnit:GetZ(), pUnit:GetO(), 14, 300000)
 		pUnit:SpawnCreature(8894, pUnit:GetX(), pUnit:GetY(),pUnit:GetZ(), pUnit:GetO(), 14, 300000)
 		pUnit:FullCastSpell(15061)

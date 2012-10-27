@@ -15,8 +15,8 @@
 --			--
 --------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Flurry-17687
 Shadow Bolt-15232
 Shadow Shield-12040
@@ -80,8 +80,8 @@ RegisterUnitGossipEvent(9034, 2, "HREL_OnGossipSelect")
 --			 --
 ---------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Enrage-15061
 Shield Block-12169
 Shield Wall-15062
@@ -151,8 +151,8 @@ RegisterUnitGossipEvent(9035, 2, "AREL_OnGossipSelect")
 --			--
 --------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Heal-1556
 Mind Blast-15587
 Power Word: Shield-11974
@@ -216,8 +216,8 @@ RegisterUnitGossipEvent(9036, 2, "VREL_OnGossipSelect")
 --			 --
 ---------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Cleave-40504
 Hamstring-9080
 Mortal Strike-13737
@@ -281,8 +281,8 @@ RegisterUnitGossipEvent(9037, 2, "VREL_OnGossipSelect")
 --			 --
 ---------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Blizzard-8364
 Chilled-6136
 Cone of Cold-15244
@@ -364,10 +364,10 @@ RegisterUnitGossipEvent(9038, 2, "SREL_OnGossipSelect")
 --			--
 --------------
 --[[
-[[Quotes]]
+----Quotes
 Doom'rel yells: Your challenge has failed!
 Doom'rel says: You have challenged the Seven, and now you will die!
-[[Spells-ID]]
+----Spells-ID
 Banish-8994
 Curse of Weakness-12493
 Demon Armor-13787
@@ -445,8 +445,8 @@ RegisterUnitGossipEvent(9039, 2, "DOREL_OnGossipSelect")
 --			--
 --------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Backstab-15582
 Evasion-15087
 Gouge-12540

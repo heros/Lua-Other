@@ -5,9 +5,9 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Houndmaster Grebmar says: Ahh, a new chew toy for my dogs!
-[[Spells-ID]]
+----Spells-ID
 Bloodlust-21049
 Demoralizing Shout-13730
 Pummel-15615

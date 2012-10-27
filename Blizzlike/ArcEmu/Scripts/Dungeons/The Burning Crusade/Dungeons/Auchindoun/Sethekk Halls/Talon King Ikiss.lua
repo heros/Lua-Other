@@ -1,6 +1,6 @@
 local mod = getfenv(1)
 assert(mod)
-module(mod._NAME..".TALON_KING_IKISS",package.seeall)
+--module(mod._NAME..".TALON_KING_IKISS",package.seeall)
 local self = getfenv(1)
 
 function OnSpawn(unit)

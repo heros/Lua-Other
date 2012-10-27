@@ -11,8 +11,8 @@
 --       		   --
 ---------------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Chilled-6136
 Frost Armor-12544
 Frost Nova-12674
@@ -65,8 +65,8 @@ RegisterUnitEvent(9041, 4, "FDV_OnDeath")
 --       --
 -----------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Curse of Blood-15042
 Enrage-8599
 ]]--

@@ -5,9 +5,9 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Phalanx yells: Violence! Property damage! None shall pass!!
-[[Spells-ID]]
+----Spells-ID
 Fireball Volley-15285
 Mighty Blow-14099
 Thunderclap-15588

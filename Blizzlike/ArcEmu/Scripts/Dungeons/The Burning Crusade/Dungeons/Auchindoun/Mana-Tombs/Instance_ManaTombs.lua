@@ -1,4 +1,4 @@
-local instance_mod = require("DUNGEON_AUCHINDOUN")
+--[[local instance_mod = require("DUNGEON_AUCHINDOUN")
 assert(instance_mod)
 module(instance_mod._NAME..".INSTANCE_MANATOMBS",package.seeall)
 local mod = getfenv(1)
@@ -30,4 +30,4 @@ for _,v in pairs(modules) do
 			print(errormsg)
 		end
 	end
-end
+end]]--

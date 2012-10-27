@@ -5,18 +5,18 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Twilight Lord Kelris yells: Who dares disturb my meditation?!
 Twilight Lord Kelris yells: Dust to Dust.
 Twilight Lord Kelris yells: Sleep...
-[[Spells-ID]]
+----Spells-ID
 Mind Blast-15587
 Sleep-8399
 ]]--
 
 function TwilightLordKelris_OnCombat(pUnit, event)
-	pUnit:PlaySoundToSet(5802)
 	pUnit:SendChatMessage(12, 0, "Who dares disturb my meditation?!")
+	pUnit:PlaySoundToSet(5802)
 	pUnit:RegisterEvent("TwilightLordKelris_MindBlast", 10000, 0)
 	pUnit:RegisterEvent("TwilightLordKelris_Sleep", 20000, 0)
 end
@@ -36,8 +36,8 @@ function TwilightLordKelris_OnLeaveCombat(pUnit, event)
 end
  
 function TwilightLordKelris_OnDeath(pUnit, event)
-	pUnit:PlaySoundToSet(5803)
 	pUnit:SendChatMessage(12, 0, "Dust to Dust.")
+	pUnit:PlaySoundToSet(5803)
 	pUnit:RemoveEvents()
 end
  

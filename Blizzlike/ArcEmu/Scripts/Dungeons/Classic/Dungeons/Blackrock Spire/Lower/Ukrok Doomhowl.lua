@@ -5,11 +5,11 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Urok Doomhowl yells: You have summoned me, fool! Now DIE!
 Urok Doomhowl says: I'll crush you!
 Urok Doomhowl says: Me smash! You die!
-[[Spells-ID]]
+----Spells-ID
 Intimidating Roar-16508
 Rend-16509
 Strike-15580

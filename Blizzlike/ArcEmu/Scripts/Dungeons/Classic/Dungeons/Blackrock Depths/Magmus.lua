@@ -5,9 +5,9 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Magmus yells: Emperor Thaurissan does not wish to be disturbed! Turn back now or face your doom, weak mortals!
-[[Spells-ID]]
+----Spells-ID
 Fiery Burst-15668
 War Stomp-15593
 ]]--

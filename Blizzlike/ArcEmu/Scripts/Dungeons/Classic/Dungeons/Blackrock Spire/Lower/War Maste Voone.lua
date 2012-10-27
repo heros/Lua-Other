@@ -5,8 +5,8 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
-[[Spells-ID]]
+----Quotes
+----Spells-ID
 Cleave-15284
 Mortal Strike-16856
 Pummel-15615
@@ -57,9 +57,6 @@ function WMV_Cleave(pUnit, Event)
 	pUnit:CastSpellOnTarget(15284)
 end
 
-function WMV_OnKilledTarget(pUnit, Event, player)
-end
-
 function WMV_OnLeaveCombat(pUnit, Event)
 	pUnit:RemoveEvents()
 end
@@ -70,5 +67,4 @@ end
 
 RegisterUnitEvent(9237, 1, "WMV_OnCombat")
 RegisterUnitEvent(9237, 2, "WMV_OnLeaveCombat")
-RegisterUnitEvent(9237, 3, "WMV_OnKilledTarget")
 RegisterUnitEvent(9237, 4, "WMV_OnDeath")

@@ -15,30 +15,26 @@
    Original Code by DARKI
    Version 1
 ========================================]]--
--- % Completed: 50
+-- % Completed: 50%
 -- Comments: Summoning Mages & Minion is missing
 
--- [[Spells ]] --
 local SHADOWBOLTVOLLEY = 20741
 local BONESHIELD = 27688
 
-
-
--- [[ Functions ]] --
 function Kormok_OnCombat(Unit, Event)
-	shadow=10000+math.random(1, 5000)
-	bone=2000+math.random(1, 43000)
+	shadow = 10000+math.random(1, 5000)
+	bone = 2000+math.random(1, 43000)
 	Unit:RegisterEvent("Kormok_Shadow", shadow, 0)
 	Unit:RegisterEvent("Kormok_Bone", bone, 0)
 end
 
 function Kormok_Shadow(Unit, Event)
-	RandomPlayer=Unit:GetRandomPlayer()
+	RandomPlayer = Unit:GetRandomPlayer()
 	Unit:FullCastSpellOnTarget(SHADOWBOLTVOLLEY, RandomPlayer)
 end
 
 function Kormok_Bone(Unit, Event)
-	RandomPlayer=Unit:GetRandomPlayer()
+	RandomPlayer = Unit:GetRandomPlayer()
 	Unit:FullCastSpellOnTarget(BONESHIELD, RandomPlayer)
 end
 
@@ -46,16 +42,10 @@ function Kormok_OnLeaveCombat(Unit, Event)
 	Unit:RemoveEvents()
 end
 
-function Kormok_OnKilledTarget(Unit, Event)
-end
-
 function Kormok_OnDied(Unit, Event)
 	Unit:RemoveEvents()
 end
 
-
--- [[ Registering ]] --
 RegisterUnitEvent(16118, 1, "Kormok_OnCombat")
 RegisterUnitEvent(16118, 2, "Kormok_OnLeaveCombat")
-RegisterUnitEvent(16118, 3, "Kormok_OnKilledTarget")
 RegisterUnitEvent(16118, 4, "Kormok_OnDied")

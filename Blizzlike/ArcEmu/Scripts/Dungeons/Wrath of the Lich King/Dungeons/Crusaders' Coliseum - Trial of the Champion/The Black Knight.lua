@@ -276,19 +276,13 @@ function Black_Knight_Undead_OnSpawn(pUnit, Event)
 		blackKnight:SetHealth(201000)
 		blackKnight:SetMaxHealth(201000)
 	end
-end	
-
-
-if (GetLuaEngine() ~= "LuaHypArc") then
-	print("LuaEngine: Did not Load 'ToC - Black Knight' script. LuaHypArc NOT installed.")
-	print("LuaEngine: Please visit http://luahyparc.zapto.org/ for more information.")
-else
-	RegisterUnitEvent(undead_ID, 1, "Black_Knight_Undead_OnCombat")
-	RegisterUnitEvent(undead_ID, 2, "Black_Knight_Undead_OnLeaveCombat")
-	RegisterUnitEvent(undead_ID, 3, "Black_Knight_OnKilledTarget")
-	RegisterUnitEvent(undead_ID, 4, "Black_Knight_Undead_OnDeath")
-	RegisterUnitEvent(undead_ID, 18, "Black_Knight_Undead_OnSpawn")
 end
+
+RegisterUnitEvent(undead_ID, 1, "Black_Knight_Undead_OnCombat")
+RegisterUnitEvent(undead_ID, 2, "Black_Knight_Undead_OnLeaveCombat")
+RegisterUnitEvent(undead_ID, 3, "Black_Knight_OnKilledTarget")
+RegisterUnitEvent(undead_ID, 4, "Black_Knight_Undead_OnDeath")
+RegisterUnitEvent(undead_ID, 18, "Black_Knight_Undead_OnSpawn")
 
 
 ----------------------------------------------------------------------------------------------------------------

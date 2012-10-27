@@ -5,9 +5,9 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Electrocutioner 6000 yells: Electric justice!
-[[Spells-ID]]
+----Spells-ID
 Chain Bolt-11085
 Megavolt-11082
 Shock-11084
@@ -40,6 +40,6 @@ function Electrocutioner_6000_OnDied(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(6235, 1, "Electrocutioner_6000_OnCombat")
-RegisterpUnitEvent(6235, 2, "Electrocutioner_6000_OnLeaveCombat")
-RegisterpUnitEvent(6235, 4, "Electrocutioner_6000_OnDied")
+RegisterUnitEvent(6235, 1, "Electrocutioner_6000_OnCombat")
+RegisterUnitEvent(6235, 2, "Electrocutioner_6000_OnLeaveCombat")
+RegisterUnitEvent(6235, 4, "Electrocutioner_6000_OnDied")

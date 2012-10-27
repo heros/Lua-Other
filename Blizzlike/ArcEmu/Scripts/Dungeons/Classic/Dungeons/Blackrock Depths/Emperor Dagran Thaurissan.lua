@@ -5,7 +5,7 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Emperor Dagran Thaurissan yells: Ha! You can't even begin to imagine the futility of your efforts.
 Emperor Dagran Thaurissan yells: Hail to the king, baby!
 Emperor Dagran Thaurissan yells: I will crush you into little tiny pieces!
@@ -13,7 +13,7 @@ Emperor Dagran Thaurissan yells: Is that the best you can do? Do you really expe
 Emperor Dagran Thaurissan yells: Thank you for clearing out those foolish senators. Now prepare to meet your doom at the hands of Ragnaros' most powerful servant.
 Emperor Dagran Thaurissan yells: They were just getting in the way anyways.
 Emperor Dagran Thaurissan yells: Your efforts are utterly pointless, fools! You will never be able to defeat me!
-[[Spells-ID]]
+----Spells-ID
 Avatar of Flame-15636
 Hand of Thaurissan-17492
 ]]--

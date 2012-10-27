@@ -2,7 +2,7 @@ local mod = getfenv(1)
 if(type(mod) ~= "table") then 
 	error("Missing Shadow Labyrinth module!") 
 end
-module(mod._NAME..".GRAND_MASTER_VORPIL",package.seeall)
+--module(mod._NAME..".GRAND_MASTER_VORPIL",package.seeall)
 local self = getfenv(1)
 
 function OnSpawn(unit)

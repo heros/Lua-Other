@@ -274,9 +274,6 @@ function MultiShot(Unit)
     Ambusher:RegisterEvent("MultiShot", 5000, 1)
     end
 end
-RegisterUnitEvent(21865, 1, "Ambusher")
-RegisterUnitEvent(21873, 1, "Guardian")
-
 
 function Guardian(Unit, event)
     Guardian = Unit
@@ -295,6 +292,8 @@ function Hamstring(Unit, event)
     end
     end
 
+RegisterUnitEvent(21865, 1, "Ambusher")
+RegisterUnitEvent(21873, 1, "Guardian")
 RegisterUnitEvent(21217, 1, "OnCombat")
 RegisterUnitEvent(21217, 2, "OnLeaveCombat")
 RegisterUnitEvent(21217, 3, "OnKilledTarget")

@@ -5,7 +5,7 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Plugger Spazzring yells: Hey! Get away from that!
 Plugger Spazzring yells: Hey! Stop that!
 Plugger Spazzring yells: Hey, my pockets were picked!
@@ -17,7 +17,7 @@ Plugger Spazzring says: Drink up! There's more where that came from!
 Plugger Spazzring says: Enjoy! You won't find better ale anywhere!
 Plugger Spazzring says: Have you tried the Dark Iron Ale? It's the best!
 Plugger Spazzring says: Try the boar! It's my new recipe!
-[[Spells-ID]]
+----Spells-ID
 Banish-8994
 Curse of Tongues-13338
 Demon Armor-13787

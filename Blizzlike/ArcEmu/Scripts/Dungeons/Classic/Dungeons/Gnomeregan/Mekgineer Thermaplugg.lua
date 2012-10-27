@@ -5,11 +5,11 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Mekgineer Thermaplugg yells: Explosions! MORE explosions! I got to have more explosions!
 Mekgineer Thermaplugg yells: My machines are the future! They'll destroy you all!
 Mekgineer Thermaplugg yells: Usurpers! Gnomeregan is mine!
-[[Spells-ID]]
+----Spells-ID
 Knock Away-10101
 Knock Away-11130
 ]]--
@@ -45,7 +45,6 @@ function Mekgineer_OnDied(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(6228, 1, "Mekgineer_OnCombat")
-RegisterpUnitEvent(6228, 2, "Mekgineer_OnLeaveCombat")
-RegisterpUnitEvent(6228, 3, "Mekgineer_OnKilledTarget")
-RegisterpUnitEvent(6228, 4, "Mekgineer_OnDied")
+RegisterUnitEvent(6228, 1, "Mekgineer_OnCombat")
+RegisterUnitEvent(6228, 2, "Mekgineer_OnLeaveCombat")
+RegisterUnitEvent(6228, 4, "Mekgineer_OnDied")

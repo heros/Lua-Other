@@ -42,7 +42,7 @@ function radiation_dt_OnDied(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(6231, 1, "radiation_dt_OnCombat")
-RegisterpUnitEvent(6231, 2, "radiation_dt_OnLeaveCombat")
-RegisterpUnitEvent(6231, 4, "radiation_dt_OnDied")
+RegisterUnitEvent(6231, 1, "radiation_dt_OnCombat")
+RegisterUnitEvent(6231, 2, "radiation_dt_OnLeaveCombat")
+RegisterUnitEvent(6231, 4, "radiation_dt_OnDied")
 

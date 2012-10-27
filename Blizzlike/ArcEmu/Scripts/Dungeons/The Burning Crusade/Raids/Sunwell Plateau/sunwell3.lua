@@ -65,7 +65,7 @@ function AlyEnrage(pUnit, event)
 end
 
 RegisterUnitEvent(25166, 1, "WarlockOnCombat")
-RegisterUnitEvent(25166, 2, "WarlockOnleaveCombat")
+RegisterUnitEvent(25166, 2, "WarlockOnLeaveCombat")
 RegisterUnitEvent(25166, 3, "WarlockOnKilledTarget")
 RegisterUnitEvent(25166, 4, "WarlockOnDied")
 
@@ -142,7 +142,7 @@ function LadyEnrage(pUnit, event)
 	pUnit:CastSpell(26662) 
 end		
 
-RegisterUnitEvent(25165, 1, "LadyOnCombat")
+RegisterUnitEvent(25165, 1, "Lady_OnCombat")
 RegisterUnitEvent(25165, 2, "LadyOnLeaveCombat")
 RegisterUnitEvent(25165, 3, "LadyOnKilledTarget")
 RegisterUnitEvent(25165, 4, "LadyOnDied")

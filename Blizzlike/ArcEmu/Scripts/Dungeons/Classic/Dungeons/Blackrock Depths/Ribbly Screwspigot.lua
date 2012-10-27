@@ -5,9 +5,9 @@
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
 --[[
-[[Quotes]]
+----Quotes
 Ribbly Screwspigot says: No! Get away from me! Help!!
-[[Spells-ID]]
+----Spells-ID
 Gouge-12540
 Hamstring-9080
 ]]--

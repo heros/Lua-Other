@@ -1,4 +1,4 @@
-local instance_mod = require("DUNGEON_AUCHINDOUN")
+--[[local instance_mod = require("DUNGEON_AUCHINDOUN")
 
 if(type(instance_mod) ~= "table") then 
 error("Auchindoun Module is missing!", 1) 
@@ -33,4 +33,4 @@ for _,v in pairs(modules) do
 			print(errormsg)
 		end
 	end
-end
+end]]--

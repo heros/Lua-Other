@@ -21,8 +21,6 @@ function Traitor_end(Unit, Event)
 	Unit:DestroyCustomWaypointMap();
 end
 
-
-
 function Traitor_OnStart(Unit, Event)
 	Unit:CreateCustomWaypointMap();
 	Unit:CreateWaypoint(-10521.876953, 1064.410278, 54.820744, 3.220135, 0, 256, 0);
