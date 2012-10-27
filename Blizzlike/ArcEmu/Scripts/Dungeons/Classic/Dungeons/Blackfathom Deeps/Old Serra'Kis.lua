@@ -4,10 +4,6 @@
 -- by me.                                                        --
 --                     Copyright (c) zdroid9770                  --
 -------------------------------------------------------------------
---[[
-[[Quotes]]
-[[Spells-ID]]
-]]--
 
 function OldSerra_OnLeaveCombat(pUnit, event)
 	pUnit:RemoveEvents()
