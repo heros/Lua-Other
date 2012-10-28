@@ -20,11 +20,8 @@ local check = 0
 function Lai_ShadowBolt(pUnit, event)        -- got no name yet
 local plr = pUnit:GetRandomPlayer(0)
     if plr then
-<<<<<<< HEAD
 		pUnit:FullCastSpellOnTarget(29317, plr)
-=======
  	pUnit:FullCastSpellOnTarget(29317, plr)
->>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
     else
     end
 end
