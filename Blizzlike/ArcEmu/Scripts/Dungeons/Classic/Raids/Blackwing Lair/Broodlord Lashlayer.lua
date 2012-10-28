@@ -57,8 +57,4 @@ end
 
 RegisterUnitEvent(12017, 1, "Broodlord_Lashlayer_OnCombat")
 RegisterUnitEvent(12017, 2, "Broodlord_Lashlayer_OnLeaveCombat")
-<<<<<<< HEAD
 RegisterUnitEvent(12017, 4, "Broodlord_Lashlayer_OnDeath")
-=======
-RegisterUnitEvent(12017, 4, "Broodlord_Lashlayer_OnDeath")	
->>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12

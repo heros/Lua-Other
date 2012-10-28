@@ -9,11 +9,7 @@ This is all the thrash mobs scripted in Molten Core.
 -----Molten Giant-----
 
 function MoltenGiant_OnEnterCombat(pUnit, Event)
-<<<<<<< HEAD
 	pUnit:RegisterEvent("MoltenGiant_Smash", 20000,1)
-=======
-    pUnit:RegisterEvent("MoltenGiant_Smash", 20000,1)
->>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
 	pUnit:RegisterEvent("MoltenGiant_Knockback", 10000,1)
 end
 

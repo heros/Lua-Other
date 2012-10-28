@@ -2,11 +2,7 @@
 -- This script is created by zdroid9770; please do not edit this --
 -- script and claim it as your own, as of All rights are claimed --
 -- by me.                                                        --
-<<<<<<< HEAD
 --                     Copyright© zdroid9770					 --
-=======
---                     CopyrightÂ© zdroid9770			 --
->>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
 -------------------------------------------------------------------
 
 function Deep_Borer_OnCombat(pUnit, event)
@@ -44,9 +40,9 @@ function Deep_Borer_OnLeaveCombat(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(11789, 1, "Deep_Borer_OnCombat")
-RegisterpUnitEvent(11789, 2, "Deep_Borer_OnLeaveCombat")
-RegisterpUnitEvent(11789, 4, "Deep_Borer_OnDeath")
+RegisterUnitEvent(11789, 1, "Deep_Borer_OnCombat")
+RegisterUnitEvent(11789, 2, "Deep_Borer_OnLeaveCombat")
+RegisterUnitEvent(11789, 4, "Deep_Borer_OnDeath")
 
 function Deeprot_Stomper_OnCombat(pUnit, event)
 	pUnit:FullCastSpellOnTarget(27993, pUnit:GetRandomPlayer(0))
@@ -125,9 +121,9 @@ function Deeprot_Stomper_OnLeaveCombat(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(13141, 1, "Deeprot_Stomper_OnCombat")
-RegisterpUnitEvent(13141, 2, "Deeprot_Stomper_OnLeaveCombat")
-RegisterpUnitEvent(13141, 4, "Deeprot_Stomper_OnDeath")
+RegisterUnitEvent(13141, 1, "Deeprot_Stomper_OnCombat")
+RegisterUnitEvent(13141, 2, "Deeprot_Stomper_OnLeaveCombat")
+RegisterUnitEvent(13141, 4, "Deeprot_Stomper_OnDeath")
 
 function Deeprot_Tangler_OnCombat(pUnit, event)
 	pUnit:FullCastSpellOnTarget(40363, pUnit:GetRandomPlayer(0))
@@ -207,9 +203,9 @@ function Deeprot_Tangler_OnLeaveCombat(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(13142, 1, "Deeprot_Tangler_OnCombat")
-RegisterpUnitEvent(13142, 2, "Deeprot_Tangler_OnLeaveCombat")
-RegisterpUnitEvent(13142, 4, "Deeprot_Tangler_OnDeath")
+RegisterUnitEvent(13142, 1, "Deeprot_Tangler_OnCombat")
+RegisterUnitEvent(13142, 2, "Deeprot_Tangler_OnLeaveCombat")
+RegisterUnitEvent(13142, 4, "Deeprot_Tangler_OnDeath")
 
 
 function Diemetradon_OnCombat(pUnit, event)
@@ -286,9 +282,9 @@ function Diemetradon_OnLeaveCombat(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(13323, 1, "Diemetradon_OnCombat")
-RegisterpUnitEvent(13323, 2, "Diemetradon_OnLeaveCombat")
-RegisterpUnitEvent(13323, 4, "Diemetradon_OnDeath")
+RegisterUnitEvent(13323, 1, "Diemetradon_OnCombat")
+RegisterUnitEvent(13323, 2, "Diemetradon_OnLeaveCombat")
+RegisterUnitEvent(13323, 4, "Diemetradon_OnDeath")
 
 function Hydra_OnCombat(pUnit, event)
 	pUnit:RegisterEvent("HydraArcane", 18000, 0)
@@ -316,9 +312,9 @@ function Hydra_OnLeaveCombat(pUnit)
 	pUnit:RemoveEvents()
 end
 
-RegisterpUnitEvent(12207, 1, "Hydra_OnCombat")
-RegisterpUnitEvent(12207, 2, "Hydra_OnLeaveCombat")
-RegisterpUnitEvent(12207, 4, "Hydra_OnDeath")
+RegisterUnitEvent(12207, 1, "Hydra_OnCombat")
+RegisterUnitEvent(12207, 2, "Hydra_OnLeaveCombat")
+RegisterUnitEvent(12207, 4, "Hydra_OnDeath")
 --[[
 function Pre_Behemoth_OnCombat(pUnit, event)
 	pUnit:FullCastSpellOnTarget(26281, pUnit:GetRandomPlayer(0))
@@ -408,18 +404,11 @@ end
 function Pre_Behemoth_OnLeaveCombat(pUnit)
 	pUnit:RemoveEvents()
 end
-<<<<<<< HEAD
+
 RegisterUnitEvent(12203, 1, "Pre_Behemoth_OnCombat")
 RegisterUnitEvent(12203, 2, "Pre_Behemoth_OnLeaveCombat")
 RegisterUnitEvent(12203, 4, "Pre_Behemoth_OnDeath")
 ]]--
-=======
-]]--
-RegisterpUnitEvent(12203, 1, "Pre_Behemoth_OnCombat")
-RegisterpUnitEvent(12203, 2, "Pre_Behemoth_OnLeaveCombat")
-RegisterpUnitEvent(12203, 4, "Pre_Behemoth_OnDeath")
->>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
-
 
 function Barbed_Lasher_OnCombat(pUnit, event)
 	pUnit:FullCastSpellOnTarget(20699, pUnit:GetRandomPlayer(0))

@@ -24,11 +24,7 @@ local CLEAVE = 15584
 local FRENZY = 28371
 
 function Doctor_OnCombat(Unit, Event)
-<<<<<<< HEAD
 	pUnit:SendChatMessage(11, 0, "The doctor is in!")
-=======
-	pUnit:SendChatMessage(11, 0 "The doctor is in!")
->>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
 	rend = 8000+math.random(1, 2000)
 	cleave = 9000+math.random(1, 1000)
 	frenzy = math.random(1, 8000)
@@ -49,7 +45,7 @@ end
 
 function Doctor_Frenzy(Unit, Event)
 	Unit:CastSpell(FRENZY)
-	-- Textemote: verwandelt sich in einen t\195\182dlichen Frenzy! -- 
+	-- Textemote: verwandelt sich in einen t\195\182dlichen Frenzy! -- Need translate
 end
 
 function Doctor_OnLeaveCombat(Unit, Event)

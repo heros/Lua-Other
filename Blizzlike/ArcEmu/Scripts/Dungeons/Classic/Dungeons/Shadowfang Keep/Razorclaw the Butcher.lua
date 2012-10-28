@@ -2,11 +2,7 @@
 -- This script is created by zdroid9770; please do not edit this --
 -- script and claim it as your own, as of All rights are claimed --
 -- by me.                                                        --
-<<<<<<< HEAD
 --                     Copyright© zdroid9770					 --
-=======
---                     CopyrightÂ© zdroid9770         				 --
->>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
 -------------------------------------------------------------------
 
 function KokkenTor_EnterCombat (Unit, event)

@@ -1,9 +1,5 @@
 function Agonizing_Flames(Unit, event)
-<<<<<<< HEAD
 	Unit:FullCastSpellOnTarget(40932, Unit:GetRandomPlayer(0))
-=======
-  Unit:FullCastSpellOnTarget(40932, Unit:GetRandomPlayer(0))
->>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
 	Unit:FullCastSpellOnTarget(40932, Unit:GetRandomPlayer(0))
 	Unit:FullCastSpellOnTarget(40932, Unit:GetRandomPlayer(0))
 end

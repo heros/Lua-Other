@@ -50,9 +50,4 @@ end
 
 RegisterUnitEvent(10504, 1, "Lord_OnCombat")
 RegisterUnitEvent(10504, 2, "Lord_OnLeaveCombat")
-<<<<<<< HEAD
-=======
-RegisterUnitEvent(10504, 4, "Lord_OnDied")
-RegisterUnitEvent(10504, 3, "Lord_OnKilledTarget")
->>>>>>> 584fd317541b1b459f69010daa09184c4b26ef12
 RegisterUnitEvent(10504, 4, "Lord_OnDied")
